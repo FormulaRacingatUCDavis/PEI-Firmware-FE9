@@ -10,9 +10,9 @@ CND_CONF=default
 CND_DISTDIR=dist
 TMPDIR=build/${CND_CONF}/${IMAGE_TYPE}/tmp-packaging
 TMPDIRNAME=tmp-packaging
-OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/PEI.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-OUTPUT_BASENAME=PEI.X.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
-PACKAGE_TOP_DIR=pei.x/
+OUTPUT_PATH=dist/${CND_CONF}/${IMAGE_TYPE}/PEI-Firmware-FE9.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+OUTPUT_BASENAME=PEI-Firmware-FE9.${IMAGE_TYPE}.${OUTPUT_SUFFIX}
+PACKAGE_TOP_DIR=pei-firmware-fe9/
 
 # Functions
 function checkReturnCode
@@ -57,15 +57,15 @@ mkdir -p ${TMPDIR}
 
 # Copy files and create directories and links
 cd "${TOP}"
-makeDirectory ${TMPDIR}/pei.x/bin
+makeDirectory ${TMPDIR}/pei-firmware-fe9/bin
 copyFileToTmpDir "${OUTPUT_PATH}" "${TMPDIR}/${PACKAGE_TOP_DIR}bin/${OUTPUT_BASENAME}" 0755
 
 
 # Generate tar file
 cd "${TOP}"
-rm -f ${CND_DISTDIR}/${CND_CONF}/package/pei.x.tar
+rm -f ${CND_DISTDIR}/${CND_CONF}/package/pei-firmware-fe9.tar
 cd ${TMPDIR}
-tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pei.x.tar *
+tar -vcf ../../../../${CND_DISTDIR}/${CND_CONF}/package/pei-firmware-fe9.tar *
 checkReturnCode
 
 # Cleanup

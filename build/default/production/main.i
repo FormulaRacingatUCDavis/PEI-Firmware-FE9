@@ -36359,9 +36359,9 @@ extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 50 "./mcc_generated_files/mcc.h" 2
 
 # 1 "./mcc_generated_files/pin_manager.h" 1
-# 122 "./mcc_generated_files/pin_manager.h"
+# 142 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 134 "./mcc_generated_files/pin_manager.h"
+# 154 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 51 "./mcc_generated_files/mcc.h" 2
 
@@ -36488,154 +36488,130 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "./mcc_generated_files/uart1.h" 1
-# 74 "./mcc_generated_files/uart1.h"
-typedef union {
-    struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}uart1_status_t;
-# 110 "./mcc_generated_files/uart1.h"
-void UART1_Initialize(void);
-# 158 "./mcc_generated_files/uart1.h"
-_Bool UART1_is_rx_ready(void);
-# 206 "./mcc_generated_files/uart1.h"
-_Bool UART1_is_tx_ready(void);
-# 253 "./mcc_generated_files/uart1.h"
-_Bool UART1_is_tx_done(void);
-# 301 "./mcc_generated_files/uart1.h"
-uart1_status_t UART1_get_last_status(void);
-# 350 "./mcc_generated_files/uart1.h"
-uint8_t UART1_Read(void);
-# 375 "./mcc_generated_files/uart1.h"
-void UART1_Write(uint8_t txData);
-# 395 "./mcc_generated_files/uart1.h"
-void UART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 413 "./mcc_generated_files/uart1.h"
-void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 431 "./mcc_generated_files/uart1.h"
-void UART1_SetErrorHandler(void (* interruptHandler)(void));
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 87 "./mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
 # 55 "./mcc_generated_files/mcc.h" 2
-# 70 "./mcc_generated_files/mcc.h"
+
+# 1 "./mcc_generated_files/adcc.h" 1
+# 72 "./mcc_generated_files/adcc.h"
+typedef uint16_t adc_result_t;
+
+typedef __uint24 uint24_t;
+# 89 "./mcc_generated_files/adcc.h"
+typedef enum
+{
+    channel_ANC0 = 0x10,
+    channel_VSS = 0x3B,
+    channel_Temp = 0x3C,
+    channel_DAC1 = 0x3D,
+    channel_FVR_Buffer1 = 0x3E,
+    channel_FVR_Buffer2 = 0x3F
+} adcc_channel_t;
+# 131 "./mcc_generated_files/adcc.h"
+void ADCC_Initialize(void);
+# 160 "./mcc_generated_files/adcc.h"
+void ADCC_StartConversion(adcc_channel_t channel);
+# 190 "./mcc_generated_files/adcc.h"
+_Bool ADCC_IsConversionDone(void);
+# 222 "./mcc_generated_files/adcc.h"
+adc_result_t ADCC_GetConversionResult(void);
+# 253 "./mcc_generated_files/adcc.h"
+adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
+# 278 "./mcc_generated_files/adcc.h"
+void ADCC_StopConversion(void);
+# 305 "./mcc_generated_files/adcc.h"
+void ADCC_SetStopOnInterrupt(void);
+# 330 "./mcc_generated_files/adcc.h"
+void ADCC_DischargeSampleCapacitor(void);
+# 356 "./mcc_generated_files/adcc.h"
+void ADCC_LoadAcquisitionRegister(uint16_t);
+# 382 "./mcc_generated_files/adcc.h"
+void ADCC_SetPrechargeTime(uint16_t);
+# 407 "./mcc_generated_files/adcc.h"
+void ADCC_SetRepeatCount(uint8_t);
+# 435 "./mcc_generated_files/adcc.h"
+uint8_t ADCC_GetCurrentCountofConversions(void);
+# 459 "./mcc_generated_files/adcc.h"
+void ADCC_ClearAccumulator(void);
+# 484 "./mcc_generated_files/adcc.h"
+uint24_t ADCC_GetAccumulatorValue(void);
+# 512 "./mcc_generated_files/adcc.h"
+_Bool ADCC_HasAccumulatorOverflowed(void);
+# 537 "./mcc_generated_files/adcc.h"
+uint16_t ADCC_GetFilterValue(void);
+# 565 "./mcc_generated_files/adcc.h"
+uint16_t ADCC_GetPreviousResult(void);
+# 591 "./mcc_generated_files/adcc.h"
+void ADCC_DefineSetPoint(uint16_t);
+# 617 "./mcc_generated_files/adcc.h"
+void ADCC_SetUpperThreshold(uint16_t);
+# 643 "./mcc_generated_files/adcc.h"
+void ADCC_SetLowerThreshold(uint16_t);
+# 670 "./mcc_generated_files/adcc.h"
+uint16_t ADCC_GetErrorCalculation(void);
+# 697 "./mcc_generated_files/adcc.h"
+void ADCC_EnableDoubleSampling(void);
+# 721 "./mcc_generated_files/adcc.h"
+void ADCC_EnableContinuousConversion(void);
+# 745 "./mcc_generated_files/adcc.h"
+void ADCC_DisableContinuousConversion(void);
+# 773 "./mcc_generated_files/adcc.h"
+_Bool ADCC_HasErrorCrossedUpperThreshold(void);
+# 801 "./mcc_generated_files/adcc.h"
+_Bool ADCC_HasErrorCrossedLowerThreshold(void);
+# 828 "./mcc_generated_files/adcc.h"
+uint8_t ADCC_GetConversionStageStatus(void);
+# 56 "./mcc_generated_files/mcc.h" 2
+
+# 1 "./mcc_generated_files/ecan.h" 1
+# 62 "./mcc_generated_files/ecan.h"
+typedef union {
+
+    struct {
+        uint8_t idType;
+        uint32_t id;
+        uint8_t dlc;
+        uint8_t data0;
+        uint8_t data1;
+        uint8_t data2;
+        uint8_t data3;
+        uint8_t data4;
+        uint8_t data5;
+        uint8_t data6;
+        uint8_t data7;
+    } frame;
+    uint8_t array[14];
+} uCAN_MSG;
+# 115 "./mcc_generated_files/ecan.h"
+void ECAN_Initialize(void);
+# 137 "./mcc_generated_files/ecan.h"
+void CAN_sleep(void);
+# 158 "./mcc_generated_files/ecan.h"
+uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
+# 182 "./mcc_generated_files/ecan.h"
+uint8_t CAN_receive(uCAN_MSG *tempCanMsg);
+# 204 "./mcc_generated_files/ecan.h"
+uint8_t CAN_messagesInBuffer(void);
+# 228 "./mcc_generated_files/ecan.h"
+uint8_t CAN_isBusOff(void);
+# 252 "./mcc_generated_files/ecan.h"
+uint8_t CAN_isRXErrorPassive(void);
+# 276 "./mcc_generated_files/ecan.h"
+uint8_t CAN_isTXErrorPassive(void);
+# 316 "./mcc_generated_files/ecan.h"
+void ECAN_SetWakeUpInterruptHandler(void (*handler)(void));
+# 331 "./mcc_generated_files/ecan.h"
+void ECAN_WAKI_ISR(void);
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 83 "./mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 96 "./mcc_generated_files/mcc.h"
+# 98 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
 # 44 "main.c" 2
 
-
-typedef struct message {
-    uint8_t type;
-    uint8_t dlc;
-    uint8_t xcvrID;
-    uint16_t msgNum;
-    uint8_t payload[63];
-    uint16_t checksum;
-} message;
-# 81 "main.c"
-message msg;
-message handshake_message;
-
-_Bool tryReadMessage(message* m)
-{
-    uint16_t message_buffer[100];
-    while(!(UART1_is_rx_ready())){}
-    uint8_t type_dlc = (uint8_t)UART1_Read();
-    message_buffer[0] = type_dlc >> 6;
-    message_buffer[1] = type_dlc & 0b00111111;
-
-    while(!(UART1_is_rx_ready())){}
-    uint8_t ID_num = (uint8_t)UART1_Read();
-    message_buffer[2] = ID_num >> 4;
-    message_buffer[3] = ID_num & 0b00001111;
-    message_buffer[3] = message_buffer[3] << 8;
-
-    while(!(UART1_is_rx_ready())){}
-    uint8_t num = (uint8_t)UART1_Read();
-    message_buffer[3] += num;
-
-    uint8_t bytesRead = 0;
-    while(bytesRead < message_buffer[1])
-    {
-        if((UART1_is_rx_ready()))
-        {
-            message_buffer[4+bytesRead] = (uint16_t)UART1_Read();
-            bytesRead++;
-        }
-    }
-
-    while(!(UART1_is_rx_ready())){}
-    uint16_t checkSum = (uint16_t)(UART1_Read() << 8);
-    while(!(UART1_is_rx_ready())){}
-    checkSum += (uint16_t)UART1_Read();
-
-    uint32_t messageSum = 0;
-    for(uint8_t i = 0; i < message_buffer[1] + 4; i++)
-    {
-        messageSum += message_buffer[i];
-    }
-
-    if(messageSum != checkSum) return 0;
-
-    m->type = (uint8_t)message_buffer[0];
-    m->dlc = (uint8_t)message_buffer[1];
-    m->xcvrID = (uint8_t)message_buffer[2];
-    m->msgNum = message_buffer[3];
-    m->checksum = checkSum;
-
-    for(uint8_t i = 0; i < message_buffer[1]; i++)
-    {
-        m->payload[i] = (uint8_t)message_buffer[4 + i];
-    }
-    return 1;
-}
-
-_Bool compareArray(uint8_t* a, uint8_t* b, uint8_t n)
-{
-    for(uint8_t i = 0; i < n; ++i)
-    {
-        if(a[i] != b[i]) return 0;
-    }
-    return 1;
-}
-
-_Bool compareMessage(message* m1, message* m2)
-{
-    if(m1->type != m2->type) return 0;
-    if(m1->dlc != m2->dlc) return 0;
-    if(m1->xcvrID != m2->xcvrID) return 0;
-    if(m1->msgNum != m2->msgNum) return 0;
-    if(!compareArray(m1->payload, m2->payload, m1->dlc)) return 0;
-    if(m1->checksum != m2->checksum) return 0;
-    return 1;
-}
-
-uint8_t buf[2];
-_Bool tryToConnect()
-{
-    while((UART1_is_rx_ready()))
-    {
-        buf[1] = buf[0];
-        buf[0] = UART1_Read();
-        if(buf[0] == 0xFF && buf[1] == 0xFF)
-        {
-            buf[0] = 0; buf[1] = 0;
-            if(tryReadMessage(&msg))
-            {
-                if(compareMessage(&msg, &handshake_message))
-                {
-                    return 1;
-                }
-            }
-        }
-    }
-    return 0;
-}
 
 
 
@@ -36643,37 +36619,42 @@ _Bool tryToConnect()
 void main(void)
 {
 
-    SYSTEM_Initialize();
-# 197 "main.c"
-    enum STATES {Disconnected, Connected};
-    enum STATES state = Disconnected;
-    handshake_message.type = 0;
-    handshake_message.dlc = 0;
-    handshake_message.xcvrID = 0;
-    handshake_message.msgNum = 0;
-    handshake_message.checksum = 0;
+    uCAN_MSG CanCurrentData;
+    CanCurrentData.frame.idType = 0x00;
+    CanCurrentData.frame.id = 0x387;
+    CanCurrentData.frame.dlc = 0x02;
+
+    uCAN_MSG CanReadyToDrive;
+    CanReadyToDrive.frame.idType = 0x00;
+    CanReadyToDrive.frame.id = 0x0D1;
+    CanReadyToDrive.frame.dlc = 0x01;
+    CanReadyToDrive.frame.data0 = 1;
+    _Bool ReadyToDriveSent = 0;
 
     while (1)
     {
-        if(state == Disconnected)
+
+
+        uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+        CanCurrentData.frame.data0 = current >> 8;
+        CanCurrentData.frame.data1 = current & 0xFF;
+        CAN_transmit(&CanCurrentData);
+
+
+
+        if(!ReadyToDriveSent)
         {
-            if(tryToConnect())
+
+
+            uint8_t ReadyToDrive = PORTCbits.RC3;
+            if(ReadyToDrive)
             {
-
-                UART1_Write(0xFF);
-                UART1_Write(0xFF);
-                UART1_Write(0);
-                UART1_Write(0);
-                UART1_Write(0);
-                UART1_Write(0);
-                UART1_Write(0);
-
+                CAN_transmit(&CanReadyToDrive);
+                ReadyToDriveSent = 1;
             }
         }
-        if(state == Connected)
-        {
 
-        }
+
+        _delay((unsigned long)((500)*(1000000/4000.0)));
     }
-# 235 "main.c"
 }

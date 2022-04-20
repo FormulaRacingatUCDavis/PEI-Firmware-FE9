@@ -244,7 +244,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="dependentModuleKey"/>
-         <value>0</value>
+         <value>2</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="samplingFrequency"/>
@@ -12972,7 +12972,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RC3"/>
-         <value/>
+         <value>IO_RC3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RC4"/>
@@ -13076,7 +13076,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RC3"/>
-         <value>disabled</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RC4"/>
@@ -15576,7 +15576,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELC"/>
-         <value>255</value>
+         <value>247</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="CANRXPPS"/>
@@ -16060,7 +16060,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSELC3"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELC" settingAlias="ANSELC4"/>
@@ -18077,16 +18077,16 @@
          <hash>33d9f075c10c65dd8050f0803f6be37dda9e907bab43af98bc75fbd15a7c319a</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>3cd6df00a8170ebb7d1597e91324659c0d7e8a07e82cca6ce9d0391f65f781c5</hash>
-      </entry>
-      <entry>
          <file>mcc_generated_files\adcc.h</file>
          <hash>f5d886d52f1526a3ce1c6ae0340d1aebc38660307c51f07514f921feb422b44c</hash>
       </entry>
       <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>572f8e861f100084f0e3bc4b93bcdef64d3985d95c69876c0424d59f84d66156</hash>
+      </entry>
+      <entry>
          <file>mcc_generated_files\pin_manager.c</file>
-         <hash>f9daf9d2facaf7de19e8d2f86e80e80cea661b0de17db8c5dd1213510c319772</hash>
+         <hash>4fa771c5d50268c2edcdf981d8bda3dd8d19ab70a9cf564a5eac7746f4c08e9d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\adcc.c</file>

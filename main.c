@@ -51,8 +51,15 @@ void main(void)
     
     uCAN_MSG CanCurrentData; 
     CanCurrentData.frame.idType = 0x00;
-    CanCurrentData.frame.id = 0x069; // need to decide on a CAN message ID
+    CanCurrentData.frame.id = 0x387; // need to decide on a CAN message ID
     CanCurrentData.frame.dlc = 0x02;
+    
+    uCAN_MSG CanReadyToDrive; 
+    CanReadyToDrive.frame.idType = 0x00;
+    CanReadyToDrive.frame.id = 0x0D1; // need to decide on a CAN message ID
+    CanReadyToDrive.frame.dlc = 0x01;
+    CanReadyToDrive.frame.data0 = 1; // Arbitrary data signaling ReadyToDrive to VCU
+    bool ReadyToDriveSent = false;
     
     while (1)
     {
@@ -63,9 +70,19 @@ void main(void)
         CanCurrentData.frame.data1 = current & 0xFF;
         CAN_transmit(&CanCurrentData);
         
-        
-        // How do I know when ready to drive (ready to drive pin vs precharge pin?)
-        // send ready to drive code to VCU via CAN
+        // Only send CAN message once
+        // if not sent, check if ready to send
+        if(!ReadyToDriveSent)
+        {
+            // When ReadyToDrive pin is HIGH
+            // send ready to drive code to VCU via CAN
+            uint8_t ReadyToDrive = IO_RC3_GetValue();
+            if(ReadyToDrive)
+            {
+                CAN_transmit(&CanReadyToDrive);
+                ReadyToDriveSent = true;
+            }
+        }
         
         
         __delay_ms(500);

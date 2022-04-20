@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/uart1.c"
+# 1 "mcc_generated_files/ecan.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/uart1.c" 2
-# 50 "mcc_generated_files/uart1.c"
+# 1 "mcc_generated_files/ecan.c" 2
+# 51 "mcc_generated_files/ecan.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -36351,12 +36351,12 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 50 "mcc_generated_files/uart1.c" 2
+# 51 "mcc_generated_files/ecan.c" 2
 
-# 1 "mcc_generated_files/uart1.h" 1
-# 55 "mcc_generated_files/uart1.h"
+# 1 "mcc_generated_files/ecan.h" 1
+# 54 "mcc_generated_files/ecan.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 55 "mcc_generated_files/uart1.h" 2
+# 54 "mcc_generated_files/ecan.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -36443,185 +36443,422 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 56 "mcc_generated_files/uart1.h" 2
-# 74 "mcc_generated_files/uart1.h"
+# 55 "mcc_generated_files/ecan.h" 2
+
+
+
+
+
+
+
 typedef union {
+
     struct {
-        unsigned perr : 1;
-        unsigned ferr : 1;
-        unsigned oerr : 1;
-        unsigned reserved : 5;
-    };
-    uint8_t status;
-}uart1_status_t;
-# 110 "mcc_generated_files/uart1.h"
-void UART1_Initialize(void);
-# 158 "mcc_generated_files/uart1.h"
-_Bool UART1_is_rx_ready(void);
-# 206 "mcc_generated_files/uart1.h"
-_Bool UART1_is_tx_ready(void);
-# 253 "mcc_generated_files/uart1.h"
-_Bool UART1_is_tx_done(void);
-# 301 "mcc_generated_files/uart1.h"
-uart1_status_t UART1_get_last_status(void);
-# 350 "mcc_generated_files/uart1.h"
-uint8_t UART1_Read(void);
-# 375 "mcc_generated_files/uart1.h"
-void UART1_Write(uint8_t txData);
-# 395 "mcc_generated_files/uart1.h"
-void UART1_SetFramingErrorHandler(void (* interruptHandler)(void));
-# 413 "mcc_generated_files/uart1.h"
-void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
-# 431 "mcc_generated_files/uart1.h"
-void UART1_SetErrorHandler(void (* interruptHandler)(void));
-# 51 "mcc_generated_files/uart1.c" 2
+        uint8_t idType;
+        uint32_t id;
+        uint8_t dlc;
+        uint8_t data0;
+        uint8_t data1;
+        uint8_t data2;
+        uint8_t data3;
+        uint8_t data4;
+        uint8_t data5;
+        uint8_t data6;
+        uint8_t data7;
+    } frame;
+    uint8_t array[14];
+} uCAN_MSG;
+# 115 "mcc_generated_files/ecan.h"
+void ECAN_Initialize(void);
+# 137 "mcc_generated_files/ecan.h"
+void CAN_sleep(void);
+# 158 "mcc_generated_files/ecan.h"
+uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
+# 182 "mcc_generated_files/ecan.h"
+uint8_t CAN_receive(uCAN_MSG *tempCanMsg);
+# 204 "mcc_generated_files/ecan.h"
+uint8_t CAN_messagesInBuffer(void);
+# 228 "mcc_generated_files/ecan.h"
+uint8_t CAN_isBusOff(void);
+# 252 "mcc_generated_files/ecan.h"
+uint8_t CAN_isRXErrorPassive(void);
+# 276 "mcc_generated_files/ecan.h"
+uint8_t CAN_isTXErrorPassive(void);
+# 316 "mcc_generated_files/ecan.h"
+void ECAN_SetWakeUpInterruptHandler(void (*handler)(void));
+# 331 "mcc_generated_files/ecan.h"
+void ECAN_WAKI_ISR(void);
+# 52 "mcc_generated_files/ecan.c" 2
 
 
-static volatile uart1_status_t uart1RxLastError;
+static void (*WakeUpInterruptHandler)(void);
 
 
 
 
-void (*UART1_FramingErrorHandler)(void);
-void (*UART1_OverrunErrorHandler)(void);
-void (*UART1_ErrorHandler)(void);
+static uint32_t convertReg2ExtendedCANid(uint8_t tempRXBn_EIDH, uint8_t tempRXBn_EIDL, uint8_t tempRXBn_SIDH, uint8_t tempRXBn_SIDL);
+static uint32_t convertReg2StandardCANid(uint8_t tempRXBn_SIDH, uint8_t tempRXBn_SIDL);
+static void convertCANid2Reg(uint32_t tempPassedInID, uint8_t canIdType, uint8_t *passedInEIDH, uint8_t *passedInEIDL, uint8_t *passedInSIDH, uint8_t *passedInSIDL);
 
-void UART1_DefaultFramingErrorHandler(void);
-void UART1_DefaultOverrunErrorHandler(void);
-void UART1_DefaultErrorHandler(void);
+static void WakeUpDefaultInterruptHandler(void) {}
 
-void UART1_Initialize(void)
+void ECAN_Initialize(void)
 {
+    CANCON = 0x80;
+    while (0x80 != (CANSTAT & 0xE0));
 
 
 
 
-
-    U1P1L = 0x00;
-
-
-    U1P1H = 0x00;
+    ECANCON = 0x00;
 
 
-    U1P2L = 0x00;
 
 
-    U1P2H = 0x00;
+    CIOCON = 0x00;
+# 91 "mcc_generated_files/ecan.c"
+    RXM0EIDH = 0x00;
+    RXM0EIDL = 0x00;
+    RXM0SIDH = 0x00;
+    RXM0SIDL = 0x00;
+    RXM1EIDH = 0x00;
+    RXM1EIDL = 0x00;
+    RXM1SIDH = 0x00;
+    RXM1SIDL = 0x00;
 
 
-    U1P3L = 0x00;
 
 
-    U1P3H = 0x00;
+    RXF0EIDH = 0x00;
+    RXF0EIDL = 0x00;
+    RXF0SIDH = 0x00;
+    RXF0SIDL = 0x00;
+    RXF1EIDH = 0x00;
+    RXF1EIDL = 0x00;
+    RXF1SIDH = 0x00;
+    RXF1SIDL = 0x00;
+    RXF2EIDH = 0x00;
+    RXF2EIDL = 0x00;
+    RXF2SIDH = 0x00;
+    RXF2SIDL = 0x00;
+    RXF3EIDH = 0x00;
+    RXF3EIDL = 0x00;
+    RXF3SIDH = 0x00;
+    RXF3SIDL = 0x00;
+    RXF4EIDH = 0x00;
+    RXF4EIDL = 0x00;
+    RXF4SIDH = 0x00;
+    RXF4SIDL = 0x00;
+    RXF5EIDH = 0x00;
+    RXF5EIDL = 0x00;
+    RXF5SIDH = 0x00;
+    RXF5SIDL = 0x00;
+# 141 "mcc_generated_files/ecan.c"
+    BRGCON1 = 0x00;
+    BRGCON2 = 0xBF;
+    BRGCON3 = 0x07;
 
+    ECAN_SetWakeUpInterruptHandler(WakeUpDefaultInterruptHandler);
+    PIR5bits.WAKIF = 0;
+    PIE5bits.WAKIE = 1;
 
-    U1CON0 = 0xB0;
-
-
-    U1CON1 = 0x80;
-
-
-    U1CON2 = 0x00;
-
-
-    U1BRGL = 0x19;
-
-
-    U1BRGH = 0x00;
-
-
-    U1FIFO = 0x00;
-
-
-    U1UIR = 0x00;
-
-
-    U1ERRIR = 0x00;
-
-
-    U1ERRIE = 0x00;
-
-
-    UART1_SetFramingErrorHandler(UART1_DefaultFramingErrorHandler);
-    UART1_SetOverrunErrorHandler(UART1_DefaultOverrunErrorHandler);
-    UART1_SetErrorHandler(UART1_DefaultErrorHandler);
-
-    uart1RxLastError.status = 0;
+    CANCON = 0x00;
+    while (0x00 != (CANSTAT & 0xE0));
 
 }
 
-_Bool UART1_is_rx_ready(void)
+
+
+
+void CAN_sleep(void)
 {
-    return (_Bool)(PIR3bits.U1RXIF);
+    CANCON = 0x20;
+    while ((CANSTAT & 0xE0) != 0x20);
+
+
 }
 
-_Bool UART1_is_tx_ready(void)
-{
-    return (_Bool)(PIR3bits.U1TXIF && U1CON0bits.TXEN);
-}
+uint8_t CAN_transmit(uCAN_MSG *tempCanMsg) {
+    uint8_t tempEIDH = 0;
+    uint8_t tempEIDL = 0;
+    uint8_t tempSIDH = 0;
+    uint8_t tempSIDL = 0;
 
-_Bool UART1_is_tx_done(void)
-{
-    return U1ERRIRbits.TXMTIF;
-}
+    uint8_t returnValue = 0;
 
-uart1_status_t UART1_get_last_status(void){
-    return uart1RxLastError;
-}
-
-uint8_t UART1_Read(void)
-{
-    while(!PIR3bits.U1RXIF)
+    if (TXB0CONbits.TXREQ != 1)
     {
+        convertCANid2Reg(tempCanMsg->frame.id, tempCanMsg->frame.idType, &tempEIDH, &tempEIDL, &tempSIDH, &tempSIDL);
+
+        TXB0EIDH = tempEIDH;
+        TXB0EIDL = tempEIDL;
+        TXB0SIDH = tempSIDH;
+        TXB0SIDL = tempSIDL;
+        TXB0DLC = tempCanMsg->frame.dlc;
+        TXB0D0 = tempCanMsg->frame.data0;
+        TXB0D1 = tempCanMsg->frame.data1;
+        TXB0D2 = tempCanMsg->frame.data2;
+        TXB0D3 = tempCanMsg->frame.data3;
+        TXB0D4 = tempCanMsg->frame.data4;
+        TXB0D5 = tempCanMsg->frame.data5;
+        TXB0D6 = tempCanMsg->frame.data6;
+        TXB0D7 = tempCanMsg->frame.data7;
+
+        TXB0CONbits.TXREQ = 1;
+        returnValue = 1;
+
     }
-
-    uart1RxLastError.status = 0;
-
-    if(U1ERRIRbits.FERIF){
-        uart1RxLastError.ferr = 1;
-        UART1_FramingErrorHandler();
-    }
-
-    if(U1ERRIRbits.RXFOIF){
-        uart1RxLastError.oerr = 1;
-        UART1_OverrunErrorHandler();
-    }
-
-    if(uart1RxLastError.status){
-        UART1_ErrorHandler();
-    }
-
-    return U1RXB;
-}
-
-void UART1_Write(uint8_t txData)
-{
-    while(0 == PIR3bits.U1TXIF)
+    else if (TXB1CONbits.TXREQ != 1)
     {
+
+        convertCANid2Reg(tempCanMsg->frame.id, tempCanMsg->frame.idType, &tempEIDH, &tempEIDL, &tempSIDH, &tempSIDL);
+
+        TXB1EIDH = tempEIDH;
+        TXB1EIDL = tempEIDL;
+        TXB1SIDH = tempSIDH;
+        TXB1SIDL = tempSIDL;
+        TXB1DLC = tempCanMsg->frame.dlc;
+        TXB1D0 = tempCanMsg->frame.data0;
+        TXB1D1 = tempCanMsg->frame.data1;
+        TXB1D2 = tempCanMsg->frame.data2;
+        TXB1D3 = tempCanMsg->frame.data3;
+        TXB1D4 = tempCanMsg->frame.data4;
+        TXB1D5 = tempCanMsg->frame.data5;
+        TXB1D6 = tempCanMsg->frame.data6;
+        TXB1D7 = tempCanMsg->frame.data7;
+
+        TXB1CONbits.TXREQ = 1;
+        returnValue = 1;
+    }
+    else if (TXB2CONbits.TXREQ != 1)
+    {
+
+        convertCANid2Reg(tempCanMsg->frame.id, tempCanMsg->frame.idType, &tempEIDH, &tempEIDL, &tempSIDH, &tempSIDL);
+
+        TXB2EIDH = tempEIDH;
+        TXB2EIDL = tempEIDL;
+        TXB2SIDH = tempSIDH;
+        TXB2SIDL = tempSIDL;
+        TXB2DLC = tempCanMsg->frame.dlc;
+        TXB2D0 = tempCanMsg->frame.data0;
+        TXB2D1 = tempCanMsg->frame.data1;
+        TXB2D2 = tempCanMsg->frame.data2;
+        TXB2D3 = tempCanMsg->frame.data3;
+        TXB2D4 = tempCanMsg->frame.data4;
+        TXB2D5 = tempCanMsg->frame.data5;
+        TXB2D6 = tempCanMsg->frame.data6;
+        TXB2D7 = tempCanMsg->frame.data7;
+
+        TXB2CONbits.TXREQ = 1;
+        returnValue = 1;
     }
 
-    U1TXB = txData;
+    return (returnValue);
+}
+
+uint8_t CAN_receive(uCAN_MSG *tempCanMsg)
+{
+    uint8_t returnValue = 0;
+
+
+    if (RXB0CONbits.RXFUL != 0)
+    {
+        if ((RXB0SIDL & 0x08) == 0x08)
+        {
+
+            tempCanMsg->frame.idType = (uint8_t) 2;
+            tempCanMsg->frame.id = convertReg2ExtendedCANid(RXB0EIDH, RXB0EIDL, RXB0SIDH, RXB0SIDL);
+        }
+        else
+        {
+
+            tempCanMsg->frame.idType = (uint8_t) 1;
+            tempCanMsg->frame.id = convertReg2StandardCANid(RXB0SIDH, RXB0SIDL);
+        }
+
+        tempCanMsg->frame.dlc = RXB0DLC;
+        tempCanMsg->frame.data0 = RXB0D0;
+        tempCanMsg->frame.data1 = RXB0D1;
+        tempCanMsg->frame.data2 = RXB0D2;
+        tempCanMsg->frame.data3 = RXB0D3;
+        tempCanMsg->frame.data4 = RXB0D4;
+        tempCanMsg->frame.data5 = RXB0D5;
+        tempCanMsg->frame.data6 = RXB0D6;
+        tempCanMsg->frame.data7 = RXB0D7;
+        RXB0CONbits.RXFUL = 0;
+        returnValue = 1;
+    }
+    else if (RXB1CONbits.RXFUL != 0)
+    {
+        if ((RXB1SIDL & 0x08) == 0x08)
+        {
+
+            tempCanMsg->frame.idType = (uint8_t) 2;
+            tempCanMsg->frame.id = convertReg2ExtendedCANid(RXB1EIDH, RXB1EIDL, RXB1SIDH, RXB1SIDL);
+        }
+        else
+        {
+
+            tempCanMsg->frame.idType = (uint8_t) 1;
+            tempCanMsg->frame.id = convertReg2StandardCANid(RXB1SIDH, RXB1SIDL);
+        }
+
+        tempCanMsg->frame.dlc = RXB1DLC;
+        tempCanMsg->frame.data0 = RXB1D0;
+        tempCanMsg->frame.data1 = RXB1D1;
+        tempCanMsg->frame.data2 = RXB1D2;
+        tempCanMsg->frame.data3 = RXB1D3;
+        tempCanMsg->frame.data4 = RXB1D4;
+        tempCanMsg->frame.data5 = RXB1D5;
+        tempCanMsg->frame.data6 = RXB1D6;
+        tempCanMsg->frame.data7 = RXB1D7;
+        RXB1CONbits.RXFUL = 0;
+        returnValue = 1;
+    }
+    return (returnValue);
+}
+
+uint8_t CAN_messagesInBuffer(void)
+{
+    uint8_t messageCount = 0;
+    if (RXB0CONbits.RXFUL != 0)
+    {
+        messageCount++;
+    }
+    if (RXB1CONbits.RXFUL != 0)
+    {
+        messageCount++;
+    }
+
+    return (messageCount);
+}
+
+uint8_t CAN_isBusOff(void)
+{
+    uint8_t returnValue = 0;
+
+
+
+
+
+    if (COMSTATbits.TXBO == 1) {
+        returnValue = 1;
+    }
+    return (returnValue);
+}
+
+uint8_t CAN_isRXErrorPassive(void)
+{
+    uint8_t returnValue = 0;
+
+
+
+
+
+    if (COMSTATbits.RXBP == 1) {
+        returnValue = 1;
+    }
+    return (returnValue);
+}
+
+uint8_t CAN_isTXErrorPassive(void)
+{
+    uint8_t returnValue = 0;
+
+
+
+
+
+    if (COMSTATbits.TXBP == 1)
+    {
+        returnValue = 1;
+    }
+    return (returnValue);
 }
 
 
 
 
 
-void UART1_DefaultFramingErrorHandler(void){}
 
-void UART1_DefaultOverrunErrorHandler(void){}
+static uint32_t convertReg2ExtendedCANid(uint8_t tempRXBn_EIDH, uint8_t tempRXBn_EIDL, uint8_t tempRXBn_SIDH, uint8_t tempRXBn_SIDL)
+{
+    uint32_t returnValue = 0;
+    uint32_t ConvertedID = 0;
+    uint8_t CAN_standardLo_ID_lo2bits;
+    uint8_t CAN_standardLo_ID_hi3bits;
 
-void UART1_DefaultErrorHandler(void){
+    CAN_standardLo_ID_lo2bits = (uint8_t)(tempRXBn_SIDL & 0x03);
+    CAN_standardLo_ID_hi3bits = (uint8_t)(tempRXBn_SIDL >> 5);
+    ConvertedID = (uint32_t)(tempRXBn_SIDH << 3);
+    ConvertedID = ConvertedID + CAN_standardLo_ID_hi3bits;
+    ConvertedID = (ConvertedID << 2);
+    ConvertedID = ConvertedID + CAN_standardLo_ID_lo2bits;
+    ConvertedID = (ConvertedID << 8);
+    ConvertedID = ConvertedID + tempRXBn_EIDH;
+    ConvertedID = (ConvertedID << 8);
+    ConvertedID = ConvertedID + tempRXBn_EIDL;
+    returnValue = ConvertedID;
+    return (returnValue);
 }
 
-void UART1_SetFramingErrorHandler(void (* interruptHandler)(void)){
-    UART1_FramingErrorHandler = interruptHandler;
+static uint32_t convertReg2StandardCANid(uint8_t tempRXBn_SIDH, uint8_t tempRXBn_SIDL)
+{
+    uint32_t returnValue = 0;
+    uint32_t ConvertedID;
+
+
+
+    ConvertedID = (uint32_t)(tempRXBn_SIDH << 3);
+    ConvertedID = ConvertedID + (uint32_t)(tempRXBn_SIDL >> 5);
+    returnValue = ConvertedID;
+    return (returnValue);
 }
 
-void UART1_SetOverrunErrorHandler(void (* interruptHandler)(void)){
-    UART1_OverrunErrorHandler = interruptHandler;
+static void convertCANid2Reg(uint32_t tempPassedInID, uint8_t canIdType, uint8_t *passedInEIDH, uint8_t *passedInEIDL, uint8_t *passedInSIDH, uint8_t *passedInSIDL)
+{
+    uint8_t wipSIDL = 0;
+
+    if (canIdType == 2) {
+
+
+        *passedInEIDL = 0xFF & tempPassedInID;
+        tempPassedInID = tempPassedInID >> 8;
+
+
+        *passedInEIDH = 0xFF & tempPassedInID;
+        tempPassedInID = tempPassedInID >> 8;
+
+
+
+        wipSIDL = 0x03 & tempPassedInID;
+        tempPassedInID = tempPassedInID << 3;
+        wipSIDL = (0xE0 & tempPassedInID) + wipSIDL;
+        wipSIDL = (uint8_t)(wipSIDL + 0x08);
+        *passedInSIDL = (uint8_t)(0xEB & wipSIDL);
+
+
+        tempPassedInID = tempPassedInID >> 8;
+        *passedInSIDH = 0xFF & tempPassedInID;
+    }
+    else
+    {
+        *passedInEIDH = 0;
+        *passedInEIDL = 0;
+        tempPassedInID = tempPassedInID << 5;
+        *passedInSIDL = 0xFF & tempPassedInID;
+        tempPassedInID = tempPassedInID >> 8;
+        *passedInSIDH = 0xFF & tempPassedInID;
+    }
 }
 
-void UART1_SetErrorHandler(void (* interruptHandler)(void)){
-    UART1_ErrorHandler = interruptHandler;
+void ECAN_SetWakeUpInterruptHandler(void (*handler)(void))
+{
+    WakeUpInterruptHandler = handler;
+}
+
+void ECAN_WAKI_ISR(void)
+{
+    WakeUpInterruptHandler();
+    PIR5bits.WAKIF = 0;
 }

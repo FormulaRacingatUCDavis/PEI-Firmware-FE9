@@ -1,44 +1,58 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[p mainexit ]
-"64 ./mcc_generated_files/ecan.h
-[; ;./mcc_generated_files/ecan.h: 64:     struct {
-[s S3208 `uc 1 `ul 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
-[n S3208 . idType id dlc data0 data1 data2 data3 data4 data5 data6 data7 ]
-"62
-[; ;./mcc_generated_files/ecan.h: 62: typedef union {
-[u S3207 `S3208 1 `uc -> 14 `i ]
-[n S3207 . frame array ]
-"68 main.c
-[; ;main.c: 68:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
-[c E22613 16 59 60 61 62 63 .. ]
-[n E22613 . channel_ANC0 channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
-"253 ./mcc_generated_files/adcc.h
-[; ;./mcc_generated_files/adcc.h: 253: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-[v _ADCC_GetSingleConversion `(us ~T0 @X0 0 ef1`E22613 ]
-"158 ./mcc_generated_files/ecan.h
-[; ;./mcc_generated_files/ecan.h: 158: uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
-[v _CAN_transmit `(uc ~T0 @X0 0 ef1`*S3207 ]
-"4899 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h
-[s S3092 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S3092 . RC0 RC1 RC2 RC3 RC4 RC5 RC6 RC7 ]
-"4909
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4909: 
-[s S3093 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S3093 . . CCP2 PA1 ]
-"4914
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4914:         unsigned FIL1 :2;
-[s S3094 :1 `uc 1 :1 `uc 1 ]
-[n S3094 . . PA2 ]
-"4898
-[u S3091 `S3092 1 `S3093 1 `S3094 1 ]
-[n S3091 . . . . ]
-"4919
-[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4919:         unsigned FIL0_0 :1;
-[v _PORTCbits `VS3091 ~T0 @X0 0 e@16332 ]
-[v F22555 `(v ~T0 @X0 1 tf1`ul ]
-"203 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
-[v __delay `JF22555 ~T0 @X0 0 e ]
-[p i __delay ]
+"5024 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h
+[s S3100 :1 `uc 1 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3100 . INT0EDG INT1EDG INT2EDG . IPEN GIEL GIE ]
+"5033
+[s S3101 :7 `uc 1 :1 `uc 1 ]
+[n S3101 . . GIEH ]
+"5023
+[u S3099 `S3100 1 `S3101 1 ]
+[n S3099 . . . ]
+"5038
+[v _INTCON0bits `VS3099 ~T0 @X0 0 e@16338 ]
+[t ~ __interrupt . k ]
+[t T1 __interrupt ]
+"25552
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 25552:     struct {
+[s S1069 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1069 . RXB0IE RXB1IE TXB0IE TXB1IE TXB2IE ERRIE WAKIE IRXIE ]
+"25562
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 25562:     struct {
+[s S1070 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1070 . FIFOFIE RXBnIE . TXBnIE ]
+"25568
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 25568:     struct {
+[s S1071 :1 `uc 1 ]
+[n S1071 . FIFOWMIE ]
+"25551
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 25551: typedef union {
+[u S1068 `S1069 1 `S1070 1 `S1071 1 ]
+[n S1068 . . . . ]
+"25572
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 25572: extern volatile PIE5bits_t PIE5bits __attribute__((address(0x3995)));
+[v _PIE5bits `VS1068 ~T0 @X0 0 e@14741 ]
+"26251
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 26251:     struct {
+[s S1095 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S1095 . RXB0IF RXB1IF TXB0IF TXB1IF TXB2IF ERRIF WAKIF IRXIF ]
+"26261
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 26261:     struct {
+[s S1096 :1 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S1096 . FIFOFIF RXBnIF . TXBnIF ]
+"26267
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 26267:     struct {
+[s S1097 :1 `uc 1 ]
+[n S1097 . FIFOWMIF ]
+"26250
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 26250: typedef union {
+[u S1094 `S1095 1 `S1096 1 `S1097 1 ]
+[n S1094 . . . . ]
+"26271
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 26271: extern volatile PIR5bits_t PIR5bits __attribute__((address(0x39A5)));
+[v _PIR5bits `VS1094 ~T0 @X0 0 e@14757 ]
+"331 mcc_generated_files/ecan.h
+[; ;mcc_generated_files/ecan.h: 331: void ECAN_WAKI_ISR(void);
+[v _ECAN_WAKI_ISR `(v ~T0 @X0 0 ef ]
 "272 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 272: __asm("CIOCON equ 03700h");
 [; <" CIOCON equ 03700h ;# ">
@@ -3063,105 +3077,54 @@ Version 4.0 HI-TECH Software Intermediate Code
 "72003
 [; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 72003: __asm("TOSU equ 03FFFh");
 [; <" TOSU equ 03FFFh ;# ">
-[v $root$_main `(v ~T0 @X0 0 e ]
-"49 main.c
-[; ;main.c: 49: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"50
-[; ;main.c: 50: {
-{
-[e :U _main ]
-[f ]
-"52
-[; ;main.c: 52:     uCAN_MSG CanCurrentData;
-[v _CanCurrentData `S3207 ~T0 @X0 1 a ]
+"52 mcc_generated_files/interrupt_manager.c
+[; ;mcc_generated_files/interrupt_manager.c: 52: void INTERRUPT_Initialize (void)
+[v _INTERRUPT_Initialize `(v ~T0 @X0 1 ef ]
 "53
-[; ;main.c: 53:     CanCurrentData.frame.idType = 0x00;
-[e = . . _CanCurrentData 0 0 -> -> 0 `i `uc ]
-"54
-[; ;main.c: 54:     CanCurrentData.frame.id = 0x387;
-[e = . . _CanCurrentData 0 1 -> -> -> 903 `i `l `ul ]
+[; ;mcc_generated_files/interrupt_manager.c: 53: {
+{
+[e :U _INTERRUPT_Initialize ]
+[f ]
 "55
-[; ;main.c: 55:     CanCurrentData.frame.dlc = 0x02;
-[e = . . _CanCurrentData 0 2 -> -> 2 `i `uc ]
-"57
-[; ;main.c: 57:     uCAN_MSG CanReadyToDrive;
-[v _CanReadyToDrive `S3207 ~T0 @X0 1 a ]
+[; ;mcc_generated_files/interrupt_manager.c: 55:     INTCON0bits.IPEN = 0;
+[e = . . _INTCON0bits 0 4 -> -> 0 `i `uc ]
+"56
+[; ;mcc_generated_files/interrupt_manager.c: 56: }
+[e :UE 3209 ]
+}
+[v $root$_INTERRUPT_InterruptManager `(v ~T0 @X0 0 e ]
 "58
-[; ;main.c: 58:     CanReadyToDrive.frame.idType = 0x00;
-[e = . . _CanReadyToDrive 0 0 -> -> 0 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 58: void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
+[v _INTERRUPT_InterruptManager `(v ~T1 @X0 1 ef ]
 "59
-[; ;main.c: 59:     CanReadyToDrive.frame.id = 0x0D1;
-[e = . . _CanReadyToDrive 0 1 -> -> -> 209 `i `l `ul ]
-"60
-[; ;main.c: 60:     CanReadyToDrive.frame.dlc = 0x01;
-[e = . . _CanReadyToDrive 0 2 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 59: {
+{
+[e :U _INTERRUPT_InterruptManager ]
+[f ]
 "61
-[; ;main.c: 61:     CanReadyToDrive.frame.data0 = 1;
-[e = . . _CanReadyToDrive 0 3 -> -> 1 `i `uc ]
+[; ;mcc_generated_files/interrupt_manager.c: 61:     if(PIE5bits.WAKIE == 1 && PIR5bits.WAKIF == 1)
+[e $ ! && == -> . . _PIE5bits 0 6 `i -> 1 `i == -> . . _PIR5bits 0 6 `i -> 1 `i 3211  ]
 "62
-[; ;main.c: 62:     _Bool ReadyToDriveSent = 0;
-[v _ReadyToDriveSent `a ~T0 @X0 1 a ]
-[e = _ReadyToDriveSent -> -> 0 `i `a ]
+[; ;mcc_generated_files/interrupt_manager.c: 62:     {
+{
+"63
+[; ;mcc_generated_files/interrupt_manager.c: 63:         ECAN_WAKI_ISR();
+[e ( _ECAN_WAKI_ISR ..  ]
 "64
-[; ;main.c: 64:     while (1)
-[e :U 3211 ]
+[; ;mcc_generated_files/interrupt_manager.c: 64:     }
+}
+[e $U 3212  ]
 "65
-[; ;main.c: 65:     {
+[; ;mcc_generated_files/interrupt_manager.c: 65:     else
+[e :U 3211 ]
+"66
+[; ;mcc_generated_files/interrupt_manager.c: 66:     {
 {
 "68
-[; ;main.c: 68:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
-[v _current `us ~T0 @X0 1 a ]
-[e = _current ( _ADCC_GetSingleConversion (1 . `E22613 0 ]
-"69
-[; ;main.c: 69:         CanCurrentData.frame.data0 = current >> 8;
-[e = . . _CanCurrentData 0 3 -> >> -> _current `ui -> 8 `i `uc ]
-"70
-[; ;main.c: 70:         CanCurrentData.frame.data1 = current & 0xFF;
-[e = . . _CanCurrentData 0 4 -> & -> _current `ui -> -> 255 `i `ui `uc ]
-"71
-[; ;main.c: 71:         CAN_transmit(&CanCurrentData);
-[e ( _CAN_transmit (1 &U _CanCurrentData ]
-"75
-[; ;main.c: 75:         if(!ReadyToDriveSent)
-[e $ ! ! != -> _ReadyToDriveSent `i -> 0 `i 3213  ]
-"76
-[; ;main.c: 76:         {
-{
-"79
-[; ;main.c: 79:             uint8_t ReadyToDrive = PORTCbits.RC3;
-[v _ReadyToDrive `uc ~T0 @X0 1 a ]
-[e = _ReadyToDrive . . _PORTCbits 0 3 ]
-"80
-[; ;main.c: 80:             if(ReadyToDrive)
-[e $ ! != -> _ReadyToDrive `i -> 0 `i 3214  ]
-"81
-[; ;main.c: 81:             {
-{
-"82
-[; ;main.c: 82:                 CAN_transmit(&CanReadyToDrive);
-[e ( _CAN_transmit (1 &U _CanReadyToDrive ]
-"83
-[; ;main.c: 83:                 ReadyToDriveSent = 1;
-[e = _ReadyToDriveSent -> -> 1 `i `a ]
-"84
-[; ;main.c: 84:             }
+[; ;mcc_generated_files/interrupt_manager.c: 68:     }
 }
-[e :U 3214 ]
-"85
-[; ;main.c: 85:         }
-}
-[e :U 3213 ]
-"88
-[; ;main.c: 88:         _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"89
-[; ;main.c: 89:     }
-}
-[e :U 3210 ]
-[e $U 3211  ]
 [e :U 3212 ]
-"90
-[; ;main.c: 90: }
-[e :UE 3209 ]
+"69
+[; ;mcc_generated_files/interrupt_manager.c: 69: }
+[e :UE 3210 ]
 }
