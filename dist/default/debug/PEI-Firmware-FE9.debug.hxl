@@ -3,16 +3,16 @@
  Unused memory ranges:
   4h - 7h
   Ch - 17h
-  1Ah - 77D1h
+  1Ah - 77ABh
   8000h - 1FFFFFh
   200010h - 2FFFFFh
   30000Ah - 30003Fh
   
- dist/default/production\PEI-Firmware-FE9.production.hex ranges:
+ dist/default/debug\PEI-Firmware-FE9.debug.hex ranges:
   0h - 3h
   8h - Bh
   18h - 19h
-  77D2h - 7FFFh
+  77ACh - 7FFFh
   200000h - 20000Fh
   300000h - 300009h
   
@@ -27,9 +27,10 @@
   T = Trailing code
   & = Find & replace opcode
   X = Find & delete opcode
-  1 = dist/default/production\PEI-Firmware-FE9.production.hex
+  1 = dist/default/debug\PEI-Firmware-FE9.debug.hex
 00000000: 1111----1111------------11--------------------------------------
-000077C0: ------------------1111111111111111111111111111111111111111111111
+00007780: --------------------------------------------11111111111111111111
+000077C0: 1111111111111111111111111111111111111111111111111111111111111111
 00007800: 1111111111111111111111111111111111111111111111111111111111111111
 00007840: 1111111111111111111111111111111111111111111111111111111111111111
 00007880: 1111111111111111111111111111111111111111111111111111111111111111

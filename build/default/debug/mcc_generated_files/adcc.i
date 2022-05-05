@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/adcc.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,8 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/adcc.c" 2
+# 51 "mcc_generated_files/adcc.c"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -36353,18 +36351,10 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
+# 51 "mcc_generated_files/adcc.c" 2
 
-# 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 142 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_Initialize (void);
-# 154 "mcc_generated_files/pin_manager.h"
-void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
-
+# 1 "mcc_generated_files/adcc.h" 1
+# 55 "mcc_generated_files/adcc.h"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
@@ -36450,50 +36440,10 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "mcc_generated_files/mcc.h" 2
+# 55 "mcc_generated_files/adcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 1 3
-
-
-
-
-
-
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\__null.h" 1 3
-# 9 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 54 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 87 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/adcc.h" 1
+# 56 "mcc_generated_files/adcc.h" 2
 # 72 "mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
 
@@ -36562,98 +36512,241 @@ _Bool ADCC_HasErrorCrossedUpperThreshold(void);
 _Bool ADCC_HasErrorCrossedLowerThreshold(void);
 # 828 "mcc_generated_files/adcc.h"
 uint8_t ADCC_GetConversionStageStatus(void);
-# 56 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/ecan.h" 1
-# 62 "mcc_generated_files/ecan.h"
-typedef union {
-
-    struct {
-        uint8_t idType;
-        uint32_t id;
-        uint8_t dlc;
-        uint8_t data0;
-        uint8_t data1;
-        uint8_t data2;
-        uint8_t data3;
-        uint8_t data4;
-        uint8_t data5;
-        uint8_t data6;
-        uint8_t data7;
-    } frame;
-    uint8_t array[14];
-} uCAN_MSG;
-# 115 "mcc_generated_files/ecan.h"
-void ECAN_Initialize(void);
-# 137 "mcc_generated_files/ecan.h"
-void CAN_sleep(void);
-# 158 "mcc_generated_files/ecan.h"
-uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
-# 182 "mcc_generated_files/ecan.h"
-uint8_t CAN_receive(uCAN_MSG *tempCanMsg);
-# 204 "mcc_generated_files/ecan.h"
-uint8_t CAN_messagesInBuffer(void);
-# 228 "mcc_generated_files/ecan.h"
-uint8_t CAN_isBusOff(void);
-# 252 "mcc_generated_files/ecan.h"
-uint8_t CAN_isRXErrorPassive(void);
-# 276 "mcc_generated_files/ecan.h"
-uint8_t CAN_isTXErrorPassive(void);
-# 316 "mcc_generated_files/ecan.h"
-void ECAN_SetWakeUpInterruptHandler(void (*handler)(void));
-# 331 "mcc_generated_files/ecan.h"
-void ECAN_WAKI_ISR(void);
-# 57 "mcc_generated_files/mcc.h" 2
-# 72 "mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 98 "mcc_generated_files/mcc.h"
-void PMD_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
-
-
-
-void SYSTEM_Initialize(void)
+# 52 "mcc_generated_files/adcc.c" 2
+# 62 "mcc_generated_files/adcc.c"
+void ADCC_Initialize(void)
 {
-    INTERRUPT_Initialize();
-    PMD_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    ADCC_Initialize();
-    ECAN_Initialize();
+
+
+    ADLTHL = 0x00;
+
+    ADLTHH = 0x00;
+
+    ADUTHL = 0x00;
+
+    ADUTHH = 0x00;
+
+    ADSTPTL = 0x00;
+
+    ADSTPTH = 0x00;
+
+    ADACCU = 0x00;
+
+    ADRPT = 0x00;
+
+    ADPCH = 0x00;
+
+    ADACQL = 0x00;
+
+    ADACQH = 0x00;
+
+    ADCAP = 0x00;
+
+    ADPREL = 0x00;
+
+    ADPREH = 0x00;
+
+    ADCON1 = 0x00;
+
+    ADCON2 = 0x00;
+
+    ADCON3 = 0x00;
+
+    ADSTAT = 0x00;
+
+    ADREF = 0x00;
+
+    ADACT = 0x00;
+
+    ADCLK = 0x00;
+
+    ADCON0 = 0x84;
+
+
 }
 
-void OSCILLATOR_Initialize(void)
+void ADCC_StartConversion(adcc_channel_t channel)
 {
 
-    OSCCON1 = 0x60;
+    ADPCH = channel;
 
-    OSCCON3 = 0x00;
 
-    OSCEN = 0x00;
+    ADCON0bits.ADON = 1;
 
-    OSCFRQ = 0x08;
 
-    OSCTUNE = 0x00;
+    ADCON0bits.ADGO = 1;
 }
 
-void PMD_Initialize(void)
+_Bool ADCC_IsConversionDone(void)
 {
 
-    PMD0 = 0x00;
+    return ((unsigned char)(!ADCON0bits.ADGO));
+}
 
-    PMD1 = 0x00;
+adc_result_t ADCC_GetConversionResult(void)
+{
 
-    PMD2 = 0x00;
+    return ((adc_result_t)((ADRESH << 8) + ADRESL));
+}
 
-    PMD3 = 0x00;
+adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel)
+{
 
-    PMD4 = 0x00;
+    ADPCH = channel;
 
-    PMD5 = 0x00;
 
-    PMD6 = 0x00;
+    ADCON0bits.ADON = 1;
 
-    PMD7 = 0x00;
+
+    ADCON0bits.ADCONT = 0;
+
+
+    ADCON0bits.ADGO = 1;
+
+
+
+    while (ADCON0bits.ADGO)
+    {
+    }
+
+
+
+    return ((adc_result_t)((ADRESH << 8) + ADRESL));
+}
+
+void ADCC_StopConversion(void)
+{
+
+    ADCON0bits.ADGO = 0;
+}
+
+void ADCC_SetStopOnInterrupt(void)
+{
+
+    ADCON3bits.ADSOI = 1;
+}
+
+void ADCC_DischargeSampleCapacitor(void)
+{
+
+    ADPCH = 0x3b;
+}
+
+void ADCC_LoadAcquisitionRegister(uint16_t acquisitionValue)
+{
+
+    ADACQH = (uint8_t) (acquisitionValue >> 8);
+    ADACQL = (uint8_t) acquisitionValue;
+}
+
+void ADCC_SetPrechargeTime(uint16_t prechargeTime)
+{
+
+    ADPREH = (uint8_t) (prechargeTime >> 8);
+    ADPREL = (uint8_t) prechargeTime;
+}
+
+void ADCC_SetRepeatCount(uint8_t repeatCount)
+{
+
+    ADRPT = repeatCount;
+}
+
+uint8_t ADCC_GetCurrentCountofConversions(void)
+{
+
+    return ADCNT;
+}
+
+void ADCC_ClearAccumulator(void)
+{
+
+    ADCON2bits.ADACLR = 1;
+}
+
+uint24_t ADCC_GetAccumulatorValue(void)
+{
+
+    return (((uint24_t)ADACCU << 16)+((uint24_t)ADACCH << 8) + ADACCL);
+}
+
+_Bool ADCC_HasAccumulatorOverflowed(void)
+{
+
+    return ADSTATbits.ADAOV;
+}
+
+uint16_t ADCC_GetFilterValue(void)
+{
+
+    return ((uint16_t)((ADFLTRH << 8) + ADFLTRL));
+}
+
+uint16_t ADCC_GetPreviousResult(void)
+{
+
+    return ((uint16_t)((ADPREVH << 8) + ADPREVL));
+}
+
+void ADCC_DefineSetPoint(uint16_t setPoint)
+{
+
+    ADSTPTH = (uint8_t) (setPoint >> 8);
+    ADSTPTL = (uint8_t) setPoint;
+}
+
+void ADCC_SetUpperThreshold(uint16_t upperThreshold)
+{
+
+    ADUTHH = (uint8_t) (upperThreshold >> 8);
+    ADUTHL = (uint8_t) (upperThreshold);
+}
+
+void ADCC_SetLowerThreshold(uint16_t lowerThreshold)
+{
+
+    ADLTHH = (uint8_t) (lowerThreshold >> 8);
+    ADLTHL = (uint8_t) lowerThreshold;
+}
+
+uint16_t ADCC_GetErrorCalculation(void)
+{
+
+ return ((uint16_t)((ADERRH << 8) + ADERRL));
+}
+
+void ADCC_EnableDoubleSampling(void)
+{
+
+    ADCON1bits.ADDSEN = 1;
+}
+
+void ADCC_EnableContinuousConversion(void)
+{
+
+    ADCON0bits.ADCONT = 1;
+}
+
+void ADCC_DisableContinuousConversion(void)
+{
+
+    ADCON0bits.ADCONT = 0;
+}
+
+_Bool ADCC_HasErrorCrossedUpperThreshold(void)
+{
+
+    return ADSTATbits.ADUTHR;
+}
+
+_Bool ADCC_HasErrorCrossedLowerThreshold(void)
+{
+
+    return ADSTATbits.ADLTHR;
+}
+
+uint8_t ADCC_GetConversionStageStatus(void)
+{
+
+    return ADSTATbits.ADSTAT;
 }

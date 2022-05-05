@@ -49,6 +49,8 @@
 void main(void)
 {
     
+    SYSTEM_Initialize(); //this got deleted somehow, its very important
+    
     uCAN_MSG CanCurrentData; 
     CanCurrentData.frame.idType = 0x00;
     CanCurrentData.frame.id = 0x387; // need to decide on a CAN message ID
@@ -66,6 +68,7 @@ void main(void)
         // get current sensor data (RA6/RC0 ???)
         // send data via PCAN to BMS main
         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+        
         CanCurrentData.frame.data0 = current >> 8; // upper bits
         CanCurrentData.frame.data1 = current & 0xFF;
         CAN_transmit(&CanCurrentData);

@@ -12,7 +12,7 @@ channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"70 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
+"73 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
 [e E22613 . `uc
 channel_ANC0 16
 channel_VSS 59
@@ -49,8 +49,12 @@ channel_FVR_Buffer2 63
 [v _main main `(v  1 e 1 0 ]
 "62 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
-"137
-[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
+"113
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
+"125
+[v _ADCC_IsConversionDone ADCC_IsConversionDone `(a  1 e 1 0 ]
+"131
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
 "63 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _WakeUpDefaultInterruptHandler WakeUpDefaultInterruptHandler `(v  1 s 1 WakeUpDefaultInterruptHandler ]
 "65
@@ -99,7 +103,7 @@ channel_FVR_Buffer2 63
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
 "4676
 [v _TRISC TRISC `VEuc  1 e 1 @16324 ]
-[s S1176 . 1 `uc 1 RC0 1 0 :1:0 
+[s S1179 . 1 `uc 1 RC0 1 0 :1:0 
 `uc 1 RC1 1 0 :1:1 
 `uc 1 RC2 1 0 :1:2 
 `uc 1 RC3 1 0 :1:3 
@@ -109,15 +113,15 @@ channel_FVR_Buffer2 63
 `uc 1 RC7 1 0 :1:7 
 ]
 "4919
-[s S1185 . 1 `uc 1 . 1 0 :1:0 
+[s S1188 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 CCP2 1 0 :1:1 
 `uc 1 PA1 1 0 :1:2 
 ]
-[s S1189 . 1 `uc 1 . 1 0 :1:0 
+[s S1192 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 PA2 1 0 :1:1 
 ]
-[u S1192 . 1 `S1176 1 . 1 0 `S1185 1 . 1 0 `S1189 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1192  1 e 1 @16332 ]
+[u S1195 . 1 `S1179 1 . 1 0 `S1188 1 . 1 0 `S1192 1 . 1 0 ]
+[v _PORTCbits PORTCbits `VES1195  1 e 1 @16332 ]
 [s S665 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -776,19 +780,19 @@ channel_FVR_Buffer2 63
 "49 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"82
+"87
 [v main@ReadyToDrive ReadyToDrive `uc  1 a 1 26 ]
-"70
+"75
 [v main@current current `us  1 a 2 28 ]
 [s S209 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
-"54
+"56
 [u S221 . 14 `S209 1 frame 14 0 `[14]uc 1 array 14 0 ]
 [v main@CanCurrentData CanCurrentData `S221  1 a 14 44 ]
-"59
+"61
 [v main@CanReadyToDrive CanReadyToDrive `S221  1 a 14 30 ]
-"64
+"66
 [v main@ReadyToDriveSent ReadyToDriveSent `a  1 a 1 27 ]
-"93
+"98
 } 0
 "50 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
@@ -862,14 +866,24 @@ channel_FVR_Buffer2 63
 [v convertCANid2Reg@passedInSIDL passedInSIDL `*.39uc  1 p 2 11 ]
 "437
 } 0
-"137 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
-[v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
+"113 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
+[v _ADCC_StartConversion ADCC_StartConversion `(v  1 e 1 0 ]
 {
-[v ADCC_GetSingleConversion@channel channel `E22597  1 a 1 wreg ]
-[v ADCC_GetSingleConversion@channel channel `E22597  1 a 1 wreg ]
-"140
-[v ADCC_GetSingleConversion@channel channel `E22597  1 a 1 4 ]
-"160
+[v ADCC_StartConversion@channel channel `E22597  1 a 1 wreg ]
+[v ADCC_StartConversion@channel channel `E22597  1 a 1 wreg ]
+"116
+[v ADCC_StartConversion@channel channel `E22597  1 a 1 0 ]
+"123
+} 0
+"125
+[v _ADCC_IsConversionDone ADCC_IsConversionDone `(a  1 e 1 0 ]
+{
+"129
+} 0
+"131
+[v _ADCC_GetConversionResult ADCC_GetConversionResult `(us  1 e 2 0 ]
+{
+"135
 } 0
 "58 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]

@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/interrupt_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,8 +6,13 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/interrupt_manager.c" 2
+# 49 "mcc_generated_files/interrupt_manager.c"
+# 1 "mcc_generated_files/interrupt_manager.h" 1
+# 87 "mcc_generated_files/interrupt_manager.h"
+void INTERRUPT_Initialize (void);
+# 49 "mcc_generated_files/interrupt_manager.c" 2
+
 # 1 "mcc_generated_files/mcc.h" 1
 # 49 "mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
@@ -36488,10 +36493,6 @@ extern char * cgets(char *);
 extern void cputs(const char *);
 # 54 "mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 87 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
 
 # 1 "mcc_generated_files/adcc.h" 1
 # 72 "mcc_generated_files/adcc.h"
@@ -36610,50 +36611,24 @@ void SYSTEM_Initialize(void);
 void OSCILLATOR_Initialize(void);
 # 98 "mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
+# 50 "mcc_generated_files/interrupt_manager.c" 2
 
 
-
-void SYSTEM_Initialize(void)
+void INTERRUPT_Initialize (void)
 {
-    INTERRUPT_Initialize();
-    PMD_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    ADCC_Initialize();
-    ECAN_Initialize();
+
+    INTCON0bits.IPEN = 0;
 }
 
-void OSCILLATOR_Initialize(void)
+void __attribute__((picinterrupt(("")))) INTERRUPT_InterruptManager (void)
 {
 
-    OSCCON1 = 0x60;
+    if(PIE5bits.WAKIE == 1 && PIR5bits.WAKIF == 1)
+    {
+        ECAN_WAKI_ISR();
+    }
+    else
+    {
 
-    OSCCON3 = 0x00;
-
-    OSCEN = 0x00;
-
-    OSCFRQ = 0x08;
-
-    OSCTUNE = 0x00;
-}
-
-void PMD_Initialize(void)
-{
-
-    PMD0 = 0x00;
-
-    PMD1 = 0x00;
-
-    PMD2 = 0x00;
-
-    PMD3 = 0x00;
-
-    PMD4 = 0x00;
-
-    PMD5 = 0x00;
-
-    PMD6 = 0x00;
-
-    PMD7 = 0x00;
+    }
 }

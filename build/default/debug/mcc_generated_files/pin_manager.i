@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "mcc_generated_files/pin_manager.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "mcc_generated_files/pin_manager.c" 2
+# 49 "mcc_generated_files/pin_manager.c"
+# 1 "mcc_generated_files/pin_manager.h" 1
+# 54 "mcc_generated_files/pin_manager.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -36353,307 +36353,75 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/pin_manager.h" 1
+# 54 "mcc_generated_files/pin_manager.h" 2
 # 142 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
 # 154 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 1 3
-# 127 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uintptr_t;
-# 142 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long intptr_t;
-# 158 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef signed char int8_t;
-
-
-
-
-typedef short int16_t;
-# 173 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long int32_t;
-
-
-
-
-
-typedef long long int64_t;
-# 188 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef long long intmax_t;
-
-
-
-
-
-typedef unsigned char uint8_t;
-
-
-
-
-typedef unsigned short uint16_t;
-# 209 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long uint32_t;
-
-
-
-
-
-typedef unsigned long long uint64_t;
-# 229 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/alltypes.h" 3
-typedef unsigned long long uintmax_t;
-# 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-
-
-typedef int8_t int_fast8_t;
-
-typedef int64_t int_fast64_t;
-
-
-typedef int8_t int_least8_t;
-typedef int16_t int_least16_t;
-
-typedef int24_t int_least24_t;
-typedef int24_t int_fast24_t;
-
-typedef int32_t int_least32_t;
-
-typedef int64_t int_least64_t;
-
-
-typedef uint8_t uint_fast8_t;
-
-typedef uint64_t uint_fast64_t;
-
-
-typedef uint8_t uint_least8_t;
-typedef uint16_t uint_least16_t;
-
-typedef uint24_t uint_least24_t;
-typedef uint24_t uint_fast24_t;
-
-typedef uint32_t uint_least32_t;
-
-typedef uint64_t uint_least64_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\bits/stdint.h" 1 3
-typedef int16_t int_fast16_t;
-typedef int32_t int_fast32_t;
-typedef uint16_t uint_fast16_t;
-typedef uint32_t uint_fast32_t;
-# 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 1 3
+# 49 "mcc_generated_files/pin_manager.c" 2
 
 
 
 
 
 
-
-# 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 1 3
-# 12 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\errno.h" 3
-extern int errno;
-# 8 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
-
-# 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\__null.h" 1 3
-# 9 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 2 3
-
-
-
-extern void init_uart(void);
-
-extern char getch(void);
-extern char getche(void);
-extern void putch(char);
-extern void ungetch(char);
-
-extern __bit kbhit(void);
-
-
-
-extern char * cgets(char *);
-extern void cputs(const char *);
-# 54 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 87 "mcc_generated_files/interrupt_manager.h"
-void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/adcc.h" 1
-# 72 "mcc_generated_files/adcc.h"
-typedef uint16_t adc_result_t;
-
-typedef __uint24 uint24_t;
-# 89 "mcc_generated_files/adcc.h"
-typedef enum
+void PIN_MANAGER_Initialize(void)
 {
-    channel_ANC0 = 0x10,
-    channel_VSS = 0x3B,
-    channel_Temp = 0x3C,
-    channel_DAC1 = 0x3D,
-    channel_FVR_Buffer1 = 0x3E,
-    channel_FVR_Buffer2 = 0x3F
-} adcc_channel_t;
-# 131 "mcc_generated_files/adcc.h"
-void ADCC_Initialize(void);
-# 160 "mcc_generated_files/adcc.h"
-void ADCC_StartConversion(adcc_channel_t channel);
-# 190 "mcc_generated_files/adcc.h"
-_Bool ADCC_IsConversionDone(void);
-# 222 "mcc_generated_files/adcc.h"
-adc_result_t ADCC_GetConversionResult(void);
-# 253 "mcc_generated_files/adcc.h"
-adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-# 278 "mcc_generated_files/adcc.h"
-void ADCC_StopConversion(void);
-# 305 "mcc_generated_files/adcc.h"
-void ADCC_SetStopOnInterrupt(void);
-# 330 "mcc_generated_files/adcc.h"
-void ADCC_DischargeSampleCapacitor(void);
-# 356 "mcc_generated_files/adcc.h"
-void ADCC_LoadAcquisitionRegister(uint16_t);
-# 382 "mcc_generated_files/adcc.h"
-void ADCC_SetPrechargeTime(uint16_t);
-# 407 "mcc_generated_files/adcc.h"
-void ADCC_SetRepeatCount(uint8_t);
-# 435 "mcc_generated_files/adcc.h"
-uint8_t ADCC_GetCurrentCountofConversions(void);
-# 459 "mcc_generated_files/adcc.h"
-void ADCC_ClearAccumulator(void);
-# 484 "mcc_generated_files/adcc.h"
-uint24_t ADCC_GetAccumulatorValue(void);
-# 512 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasAccumulatorOverflowed(void);
-# 537 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetFilterValue(void);
-# 565 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetPreviousResult(void);
-# 591 "mcc_generated_files/adcc.h"
-void ADCC_DefineSetPoint(uint16_t);
-# 617 "mcc_generated_files/adcc.h"
-void ADCC_SetUpperThreshold(uint16_t);
-# 643 "mcc_generated_files/adcc.h"
-void ADCC_SetLowerThreshold(uint16_t);
-# 670 "mcc_generated_files/adcc.h"
-uint16_t ADCC_GetErrorCalculation(void);
-# 697 "mcc_generated_files/adcc.h"
-void ADCC_EnableDoubleSampling(void);
-# 721 "mcc_generated_files/adcc.h"
-void ADCC_EnableContinuousConversion(void);
-# 745 "mcc_generated_files/adcc.h"
-void ADCC_DisableContinuousConversion(void);
-# 773 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasErrorCrossedUpperThreshold(void);
-# 801 "mcc_generated_files/adcc.h"
-_Bool ADCC_HasErrorCrossedLowerThreshold(void);
-# 828 "mcc_generated_files/adcc.h"
-uint8_t ADCC_GetConversionStageStatus(void);
-# 56 "mcc_generated_files/mcc.h" 2
-
-# 1 "mcc_generated_files/ecan.h" 1
-# 62 "mcc_generated_files/ecan.h"
-typedef union {
-
-    struct {
-        uint8_t idType;
-        uint32_t id;
-        uint8_t dlc;
-        uint8_t data0;
-        uint8_t data1;
-        uint8_t data2;
-        uint8_t data3;
-        uint8_t data4;
-        uint8_t data5;
-        uint8_t data6;
-        uint8_t data7;
-    } frame;
-    uint8_t array[14];
-} uCAN_MSG;
-# 115 "mcc_generated_files/ecan.h"
-void ECAN_Initialize(void);
-# 137 "mcc_generated_files/ecan.h"
-void CAN_sleep(void);
-# 158 "mcc_generated_files/ecan.h"
-uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
-# 182 "mcc_generated_files/ecan.h"
-uint8_t CAN_receive(uCAN_MSG *tempCanMsg);
-# 204 "mcc_generated_files/ecan.h"
-uint8_t CAN_messagesInBuffer(void);
-# 228 "mcc_generated_files/ecan.h"
-uint8_t CAN_isBusOff(void);
-# 252 "mcc_generated_files/ecan.h"
-uint8_t CAN_isRXErrorPassive(void);
-# 276 "mcc_generated_files/ecan.h"
-uint8_t CAN_isTXErrorPassive(void);
-# 316 "mcc_generated_files/ecan.h"
-void ECAN_SetWakeUpInterruptHandler(void (*handler)(void));
-# 331 "mcc_generated_files/ecan.h"
-void ECAN_WAKI_ISR(void);
-# 57 "mcc_generated_files/mcc.h" 2
-# 72 "mcc_generated_files/mcc.h"
-void SYSTEM_Initialize(void);
-# 85 "mcc_generated_files/mcc.h"
-void OSCILLATOR_Initialize(void);
-# 98 "mcc_generated_files/mcc.h"
-void PMD_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
 
 
 
-void SYSTEM_Initialize(void)
-{
-    INTERRUPT_Initialize();
-    PMD_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    ADCC_Initialize();
-    ECAN_Initialize();
+    LATA = 0x00;
+    LATB = 0x00;
+    LATC = 0x00;
+
+
+
+
+    TRISA = 0xFF;
+    TRISB = 0xEF;
+    TRISC = 0xFF;
+
+
+
+
+    ANSELC = 0xF7;
+    ANSELB = 0x77;
+    ANSELA = 0xFF;
+
+
+
+
+    WPUE = 0x00;
+    WPUB = 0x00;
+    WPUA = 0x00;
+    WPUC = 0x00;
+
+
+
+
+    ODCONA = 0x00;
+    ODCONB = 0x00;
+    ODCONC = 0x00;
+
+
+
+
+    SLRCONA = 0xFF;
+    SLRCONB = 0xFF;
+    SLRCONC = 0xFF;
+
+
+
+
+    INLVLA = 0xFF;
+    INLVLB = 0xFF;
+    INLVLC = 0xFF;
+    INLVLE = 0x08;
+# 115 "mcc_generated_files/pin_manager.c"
+    CANRXPPS = 0x0B;
+    RB4PPS = 0x33;
 }
 
-void OSCILLATOR_Initialize(void)
+void PIN_MANAGER_IOC(void)
 {
-
-    OSCCON1 = 0x60;
-
-    OSCCON3 = 0x00;
-
-    OSCEN = 0x00;
-
-    OSCFRQ = 0x08;
-
-    OSCTUNE = 0x00;
-}
-
-void PMD_Initialize(void)
-{
-
-    PMD0 = 0x00;
-
-    PMD1 = 0x00;
-
-    PMD2 = 0x00;
-
-    PMD3 = 0x00;
-
-    PMD4 = 0x00;
-
-    PMD5 = 0x00;
-
-    PMD6 = 0x00;
-
-    PMD7 = 0x00;
 }

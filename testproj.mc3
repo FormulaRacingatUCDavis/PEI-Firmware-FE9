@@ -236,11 +236,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="clockFreq"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="conversionTime"/>
-         <value>23.0 us</value>
+         <value>17.9688 us</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="dependentModuleKey"/>
@@ -248,7 +248,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="samplingFrequency"/>
-         <value>43.4783kHz</value>
+         <value>55.6522kHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="sysClock"/>
@@ -256,7 +256,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="tadValue"/>
-         <value>2.0 us</value>
+         <value>1.5625 us</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ADCC" name="tncvFormula"/>
@@ -1160,7 +1160,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCLK"/>
-         <value>0</value>
+         <value>49</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ADCC" registerAlias="ADCNT"/>
@@ -1268,7 +1268,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCLK" settingAlias="ADCCS"/>
-         <value>FOSC/2</value>
+         <value>FOSC/100</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ADCC" registerAlias="ADCNT" settingAlias="ADCNT"/>
@@ -3336,7 +3336,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="DMA Manager" name="dmaTable"/>
-         <value>{&quot;dataArray&quot;:[{&quot;DMA Channels&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--&quot;,&quot;text&quot;:&quot;DMA CHANNEL1&quot;,&quot;value&quot;:&quot;false&quot;},&quot;id&quot;:&quot;DMA Channels_rowCount_0&quot;},&quot;Src Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ECAN,ADCC&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Src Module_rowCount_0&quot;},&quot;Src Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR#disabled,GPR#enabled,Program Flash#enabled,Data EEPROM#enabled&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Src Region_rowCount_0&quot;},&quot;Src SFR&quot;:{&quot;Src SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Src SFR_rowCount_0&quot;},&quot;Src VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName0&quot;,&quot;value&quot;:&quot;SrcVarName0&quot;},&quot;Src VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName0&quot;,&quot;value&quot;:&quot;SrcVarName0&quot;},&quot;id&quot;:&quot;Src VarName_rowCount_0&quot;},&quot;Src VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Src VarSize_rowCount_0&quot;,&quot;Src VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Src Address&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address0&quot;,&quot;value&quot;:&quot;Enter Address0&quot;},&quot;id&quot;:&quot;Src Address_rowCount_0&quot;,&quot;Src Address&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address0&quot;,&quot;value&quot;:&quot;Enter Address0&quot;}},&quot;Src Mode&quot;:{&quot;Src Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Src Mode_rowCount_0&quot;},&quot;Src Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Src Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Src Message Size_rowCount_0&quot;},&quot;Dst Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ECAN,ADCC&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Dst Module_rowCount_0&quot;},&quot;Dst Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR,GPR&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Dst Region_rowCount_0&quot;},&quot;Dst SFR&quot;:{&quot;Dst SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Dst SFR_rowCount_0&quot;},&quot;Dst VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName0&quot;,&quot;value&quot;:&quot;DstVarName0&quot;},&quot;Dst VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName0&quot;,&quot;value&quot;:&quot;DstVarName0&quot;},&quot;id&quot;:&quot;Dst VarName_rowCount_0&quot;},&quot;Dst VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Dst VarSize_rowCount_0&quot;,&quot;Dst VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Dst Mode&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;Dst Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Dst Mode_rowCount_0&quot;},&quot;Dst Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Dst Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Dst Message Size_rowCount_0&quot;},&quot;Start Trigger&quot;:{&quot;Start Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Start Trigger_rowCount_0&quot;},&quot;Abort Trigger&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Abort Trigger_rowCount_0&quot;,&quot;Abort Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;}}},{&quot;DMA Channels&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--&quot;,&quot;text&quot;:&quot;DMA CHANNEL2&quot;,&quot;value&quot;:&quot;false&quot;},&quot;id&quot;:&quot;DMA Channels_rowCount_1&quot;},&quot;Src Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ECAN,ADCC&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Src Module_rowCount_1&quot;},&quot;Src Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR#disabled,GPR#enabled,Program Flash#enabled,Data EEPROM#enabled&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Src Region_rowCount_1&quot;},&quot;Src SFR&quot;:{&quot;Src SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Src SFR_rowCount_1&quot;},&quot;Src VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName1&quot;,&quot;value&quot;:&quot;SrcVarName1&quot;},&quot;Src VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName1&quot;,&quot;value&quot;:&quot;SrcVarName1&quot;},&quot;id&quot;:&quot;Src VarName_rowCount_1&quot;},&quot;Src VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Src VarSize_rowCount_1&quot;,&quot;Src VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Src Address&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address1&quot;,&quot;value&quot;:&quot;Enter Address1&quot;},&quot;id&quot;:&quot;Src Address_rowCount_1&quot;,&quot;Src Address&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address1&quot;,&quot;value&quot;:&quot;Enter Address1&quot;}},&quot;Src Mode&quot;:{&quot;Src Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Src Mode_rowCount_1&quot;},&quot;Src Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Src Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Src Message Size_rowCount_1&quot;},&quot;Dst Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ECAN,ADCC&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Dst Module_rowCount_1&quot;},&quot;Dst Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR,GPR&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Dst Region_rowCount_1&quot;},&quot;Dst SFR&quot;:{&quot;Dst SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Dst SFR_rowCount_1&quot;},&quot;Dst VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName1&quot;,&quot;value&quot;:&quot;DstVarName1&quot;},&quot;Dst VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName1&quot;,&quot;value&quot;:&quot;DstVarName1&quot;},&quot;id&quot;:&quot;Dst VarName_rowCount_1&quot;},&quot;Dst VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Dst VarSize_rowCount_1&quot;,&quot;Dst VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Dst Mode&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;Dst Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Dst Mode_rowCount_1&quot;},&quot;Dst Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Dst Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Dst Message Size_rowCount_1&quot;},&quot;Start Trigger&quot;:{&quot;Start Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Start Trigger_rowCount_1&quot;},&quot;Abort Trigger&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Abort Trigger_rowCount_1&quot;,&quot;Abort Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;}}}],&quot;type&quot;:&quot;tableDynamicControls&quot;,&quot;key&quot;:&quot;dmaTable&quot;}</value>
+         <value>{&quot;dataArray&quot;:[{&quot;DMA Channels&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--&quot;,&quot;text&quot;:&quot;DMA CHANNEL1&quot;,&quot;value&quot;:&quot;false&quot;},&quot;id&quot;:&quot;DMA Channels_rowCount_0&quot;},&quot;Src Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ADCC,ECAN&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Src Module_rowCount_0&quot;},&quot;Src Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR#disabled,GPR#enabled,Program Flash#enabled,Data EEPROM#enabled&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Src Region_rowCount_0&quot;},&quot;Src SFR&quot;:{&quot;Src SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Src SFR_rowCount_0&quot;},&quot;Src VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName0&quot;,&quot;value&quot;:&quot;SrcVarName0&quot;},&quot;Src VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName0&quot;,&quot;value&quot;:&quot;SrcVarName0&quot;},&quot;id&quot;:&quot;Src VarName_rowCount_0&quot;},&quot;Src VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Src VarSize_rowCount_0&quot;,&quot;Src VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Src Address&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address0&quot;,&quot;value&quot;:&quot;Enter Address0&quot;},&quot;id&quot;:&quot;Src Address_rowCount_0&quot;,&quot;Src Address&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address0&quot;,&quot;value&quot;:&quot;Enter Address0&quot;}},&quot;Src Mode&quot;:{&quot;Src Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Src Mode_rowCount_0&quot;},&quot;Src Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Src Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Src Message Size_rowCount_0&quot;},&quot;Dst Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ADCC,ECAN&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Dst Module_rowCount_0&quot;},&quot;Dst Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR,GPR&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Dst Region_rowCount_0&quot;},&quot;Dst SFR&quot;:{&quot;Dst SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Dst SFR_rowCount_0&quot;},&quot;Dst VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName0&quot;,&quot;value&quot;:&quot;DstVarName0&quot;},&quot;Dst VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName0&quot;,&quot;value&quot;:&quot;DstVarName0&quot;},&quot;id&quot;:&quot;Dst VarName_rowCount_0&quot;},&quot;Dst VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Dst VarSize_rowCount_0&quot;,&quot;Dst VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Dst Mode&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;Dst Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Dst Mode_rowCount_0&quot;},&quot;Dst Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Dst Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Dst Message Size_rowCount_0&quot;},&quot;Start Trigger&quot;:{&quot;Start Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Start Trigger_rowCount_0&quot;},&quot;Abort Trigger&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Abort Trigger_rowCount_0&quot;,&quot;Abort Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;}}},{&quot;DMA Channels&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--&quot;,&quot;text&quot;:&quot;DMA CHANNEL2&quot;,&quot;value&quot;:&quot;false&quot;},&quot;id&quot;:&quot;DMA Channels_rowCount_1&quot;},&quot;Src Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ADCC,ECAN&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Src Module_rowCount_1&quot;},&quot;Src Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR#disabled,GPR#enabled,Program Flash#enabled,Data EEPROM#enabled&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Src Region_rowCount_1&quot;},&quot;Src SFR&quot;:{&quot;Src SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Src SFR_rowCount_1&quot;},&quot;Src VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName1&quot;,&quot;value&quot;:&quot;SrcVarName1&quot;},&quot;Src VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;SrcVarName1&quot;,&quot;value&quot;:&quot;SrcVarName1&quot;},&quot;id&quot;:&quot;Src VarName_rowCount_1&quot;},&quot;Src VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Src VarSize_rowCount_1&quot;,&quot;Src VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Src Address&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address1&quot;,&quot;value&quot;:&quot;Enter Address1&quot;},&quot;id&quot;:&quot;Src Address_rowCount_1&quot;,&quot;Src Address&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;Enter Address1&quot;,&quot;value&quot;:&quot;Enter Address1&quot;}},&quot;Src Mode&quot;:{&quot;Src Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Src Mode_rowCount_1&quot;},&quot;Src Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Src Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Src Message Size_rowCount_1&quot;},&quot;Dst Module&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;--NONE--,ADCC,ECAN&quot;,&quot;text&quot;:&quot;--NONE--&quot;,&quot;value&quot;:&quot;--NONE--&quot;},&quot;id&quot;:&quot;Dst Module_rowCount_1&quot;},&quot;Dst Region&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;SFR,GPR&quot;,&quot;text&quot;:&quot;GPR&quot;,&quot;value&quot;:&quot;GPR&quot;},&quot;id&quot;:&quot;Dst Region_rowCount_1&quot;},&quot;Dst SFR&quot;:{&quot;Dst SFR&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;},&quot;id&quot;:&quot;Dst SFR_rowCount_1&quot;},&quot;Dst VarName&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName1&quot;,&quot;value&quot;:&quot;DstVarName1&quot;},&quot;Dst VarName&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;DstVarName1&quot;,&quot;value&quot;:&quot;DstVarName1&quot;},&quot;id&quot;:&quot;Dst VarName_rowCount_1&quot;},&quot;Dst VarSize&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;},&quot;id&quot;:&quot;Dst VarSize_rowCount_1&quot;,&quot;Dst VarSize&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;10&quot;,&quot;value&quot;:&quot;10&quot;}},&quot;Dst Mode&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;Dst Mode&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;decremented,incremented,unchanged&quot;,&quot;text&quot;:&quot;unchanged&quot;,&quot;value&quot;:&quot;unchanged&quot;},&quot;id&quot;:&quot;Dst Mode_rowCount_1&quot;},&quot;Dst Message Size&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;Dst Message Size&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;&quot;,&quot;text&quot;:&quot;1&quot;,&quot;value&quot;:&quot;1&quot;},&quot;id&quot;:&quot;Dst Message Size_rowCount_1&quot;},&quot;Start Trigger&quot;:{&quot;Start Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Start Trigger_rowCount_1&quot;},&quot;Abort Trigger&quot;:{&quot;data&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;},&quot;id&quot;:&quot;Abort Trigger_rowCount_1&quot;,&quot;Abort Trigger&quot;:{&quot;isDisable&quot;:&quot;true&quot;,&quot;options&quot;:&quot;AD,ADT,CAN_ERRIF,CAN_IRXIF,CAN_RXB0IF\/FIFOIF,CAN_RXB1IF\/RXBnIF,CAN_TXB0IF,CAN_TXB1IF,CAN_TXB2IF\/TXBnIF,CAN_WAKIF,CCP1,CCP2,CCP3,CCP4,CLC1,CLC2,CLC3,CLC4,CMP1,CMP2,CRC,CSW,CWG1,CWG2,CWG3,DMA1A,DMA1DCNT,DMA1OR,DMA1SCNT,DMA2A,DMA2DCNT,DMA2OR,DMA2SCNT,I2C1,I2C1E,I2C1RX,I2C1TX,I2C2,I2C2E,I2C2RX,I2C2TX,INT0,INT1,INT2,IOC,LVD,NCO,NVM,None,OSF,SCAN,SMT1,SMT1PRA,SMT1PWA,SMT2,SMT2PRA,SMT2PWA,SPI1,SPI1RX,SPI1TX,TMR0,TMR1,TMR1G,TMR2,TMR3,TMR3G,TMR4,TMR5,TMR5G,TMR6,U1,U1E,U1RX,U1TX,U2,U2E,U2RX,U2TX,ZCD&quot;,&quot;text&quot;:&quot;None&quot;,&quot;value&quot;:&quot;None&quot;}}}],&quot;type&quot;:&quot;tableDynamicControls&quot;,&quot;key&quot;:&quot;dmaTable&quot;}</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="ECAN_ERRIISRFunction"/>
@@ -3400,11 +3400,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canBaudComboBox"/>
-         <value>20kbps</value>
+         <value>125kbps</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canClockFreqKey"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canDeviceName"/>
@@ -3432,7 +3432,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canNoscKey"/>
-         <value>extosc</value>
+         <value>hfintosc</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canSJWComboBox"/>
@@ -3440,15 +3440,15 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canSamplePoint"/>
-         <value>68%</value>
+         <value>75%</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="canTqComboBox"/>
-         <value>25</value>
+         <value>8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="clockFreqKey"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="ECAN" name="extOscFreqKey"/>
@@ -6800,15 +6800,15 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ECAN" registerAlias="BRGCON1"/>
-         <value>0</value>
+         <value>31</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ECAN" registerAlias="BRGCON2"/>
-         <value>191</value>
+         <value>152</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ECAN" registerAlias="BRGCON3"/>
-         <value>7</value>
+         <value>1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="ECAN" registerAlias="BSEL0"/>
@@ -8760,7 +8760,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON1" settingAlias="BRP"/>
-         <value>TQ = (2 x 1)/FOSC</value>
+         <value>TQ = (2 x 32)/FOSC</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON1" settingAlias="SJW"/>
@@ -8768,7 +8768,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON2" settingAlias="PRSEG"/>
-         <value>8 x TQ</value>
+         <value>1 x TQ</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON2" settingAlias="SAM"/>
@@ -8776,7 +8776,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON2" settingAlias="SEG1PH"/>
-         <value>8 x TQ</value>
+         <value>4 x TQ</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON2" settingAlias="SEG2PHTS"/>
@@ -8784,7 +8784,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON3" settingAlias="SEG2PH"/>
-         <value>8 x TQ</value>
+         <value>2 x TQ</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="ECAN" registerAlias="BRGCON3" settingAlias="WAKDIS"/>
@@ -11952,7 +11952,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CurrentSystemClockInHz"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CustomFEXTOSC"/>
@@ -11960,11 +11960,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CustomFOSC"/>
-         <value>EXTOSC operating per FEXTOSC bits (device manufacturing default)</value>
+         <value>HFINTOSC with HFFRQ = 64 MHz and CDIV = 1:1</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="CustomIRFC"/>
-         <value>4_MHz</value>
+         <value>64_MHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="ExternalClock"/>
@@ -11972,11 +11972,11 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="FOSCClockValue"/>
-         <value>1000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="HFIntOscClockInHz"/>
-         <value>4000000</value>
+         <value>64000000</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="INTERNAL OSCILLATOR" name="LFIntOscClockInHz"/>
@@ -12208,7 +12208,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1"/>
-         <value>112</value>
+         <value>96</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON3"/>
@@ -12220,7 +12220,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ"/>
-         <value>2</value>
+         <value>8</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUNE"/>
@@ -12232,7 +12232,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON1" settingAlias="NOSC"/>
-         <value>EXTOSC</value>
+         <value>HFINTOSC</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCCON3" settingAlias="CSWHOLD"/>
@@ -12276,7 +12276,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCFRQ" settingAlias="HFFRQ"/>
-         <value>4_MHz</value>
+         <value>64_MHz</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="INTERNAL OSCILLATOR" registerAlias="OSCTUNE" settingAlias="TUN"/>
@@ -17712,7 +17712,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG1L"/>
-         <value>116</value>
+         <value>4</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="System Module" registerAlias="CONFIG2H"/>
@@ -17764,7 +17764,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG1L" settingAlias="RSTOSC"/>
-         <value>EXTOSC</value>
+         <value>HFINTOSC_64MHZ</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="System Module" registerAlias="CONFIG2H" settingAlias="BORV"/>
@@ -18055,58 +18055,58 @@
          <value>Window delay time 87.5%</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.HashMap">
-      <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>d4083741ff328c6486aaad2a95ff8269754ae79d10d3cad68a51039e6549c9ae</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\device_config.h</file>
-         <hash>1cdd9f21b79365e9d589f993fd408dea96b55ecaab39351347524f515ed174e2</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>d2b798ae0162defe1856fce0f8dae092bb090c8122890420db8cead09931f2cf</hash>
-      </entry>
+   <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
          <file>main.c</file>
          <hash>2d9ec041163bd2520cff74262c66c0773655572d890b5d908935697559f62faa</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\device_config.c</file>
-         <hash>33d9f075c10c65dd8050f0803f6be37dda9e907bab43af98bc75fbd15a7c319a</hash>
+         <file>mcc_generated_files\adcc.c</file>
+         <hash>dfb2c2c53ecdd6822da07aa552b4c013e664eefeab1f12ec8207928329dcd924</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\adcc.h</file>
          <hash>f5d886d52f1526a3ce1c6ae0340d1aebc38660307c51f07514f921feb422b44c</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>572f8e861f100084f0e3bc4b93bcdef64d3985d95c69876c0424d59f84d66156</hash>
+         <file>mcc_generated_files\device_config.c</file>
+         <hash>284c6b2cd040d1a55d0cd9aac7b10bffe223083fbf5aa1ffb1097f88d93d63c5</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>4fa771c5d50268c2edcdf981d8bda3dd8d19ab70a9cf564a5eac7746f4c08e9d</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\adcc.c</file>
-         <hash>e7d90cd13351ac77ea660770ebbbb2b4627e7c4439bcf26ad68dd2d6e87b24fe</hash>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>080bcebd8baf8d94f5cfeee4f97f340555f7ceb06cc43f91fd1d55349277552d</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\ecan.c</file>
-         <hash>560a3de1c2e817f53fc222d93a85881a7d8bcd8743fa197576ef0b7f4c9dc1b3</hash>
+         <hash>ef37abd6732da68e999b13679d498cb429aa6a805a39e052fd4fbcce185f1f11</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.c</file>
-         <hash>e9301ad937de09866121653299a868aaf810bc0737920b940bfcd381f5238da0</hash>
+         <file>mcc_generated_files\ecan.h</file>
+         <hash>441ea7c003bf00226d9ce1b9d5b36724334add650d5455066f5cdddb7017e6dd</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\interrupt_manager.c</file>
          <hash>9087e7ffb24c2fcef854f609bb1c7295033271666e9dc037621f9d37ee1fbf40</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\ecan.h</file>
-         <hash>441ea7c003bf00226d9ce1b9d5b36724334add650d5455066f5cdddb7017e6dd</hash>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>d2b798ae0162defe1856fce0f8dae092bb090c8122890420db8cead09931f2cf</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.c</file>
+         <hash>5c454a10ea4be37664ac6af6d1b9f932925f91e1a8105074990eca381473b9e0</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>d4083741ff328c6486aaad2a95ff8269754ae79d10d3cad68a51039e6549c9ae</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>4fa771c5d50268c2edcdf981d8bda3dd8d19ab70a9cf564a5eac7746f4c08e9d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>572f8e861f100084f0e3bc4b93bcdef64d3985d95c69876c0424d59f84d66156</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

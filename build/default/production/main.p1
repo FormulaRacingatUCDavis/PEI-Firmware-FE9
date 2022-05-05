@@ -1,5 +1,8 @@
 Version 4.0 HI-TECH Software Intermediate Code
 [p mainexit ]
+"72 ./mcc_generated_files/mcc.h
+[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
+[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
 "64 ./mcc_generated_files/ecan.h
 [; ;./mcc_generated_files/ecan.h: 64:     struct {
 [s S3208 `uc 1 `ul 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 `uc 1 ]
@@ -8,8 +11,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./mcc_generated_files/ecan.h: 62: typedef union {
 [u S3207 `S3208 1 `uc -> 14 `i ]
 [n S3207 . frame array ]
-"68 main.c
-[; ;main.c: 68:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+"70 main.c
+[; ;main.c: 70:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
 [c E22613 16 59 60 61 62 63 .. ]
 [n E22613 . channel_ANC0 channel_VSS channel_Temp channel_DAC1 channel_FVR_Buffer1 channel_FVR_Buffer2  ]
 "253 ./mcc_generated_files/adcc.h
@@ -3073,95 +3076,98 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :U _main ]
 [f ]
 "52
-[; ;main.c: 52:     uCAN_MSG CanCurrentData;
-[v _CanCurrentData `S3207 ~T0 @X0 1 a ]
-"53
-[; ;main.c: 53:     CanCurrentData.frame.idType = 0x00;
-[e = . . _CanCurrentData 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 52:     SYSTEM_Initialize();
+[e ( _SYSTEM_Initialize ..  ]
 "54
-[; ;main.c: 54:     CanCurrentData.frame.id = 0x387;
-[e = . . _CanCurrentData 0 1 -> -> -> 903 `i `l `ul ]
+[; ;main.c: 54:     uCAN_MSG CanCurrentData;
+[v _CanCurrentData `S3207 ~T0 @X0 1 a ]
 "55
-[; ;main.c: 55:     CanCurrentData.frame.dlc = 0x02;
-[e = . . _CanCurrentData 0 2 -> -> 2 `i `uc ]
+[; ;main.c: 55:     CanCurrentData.frame.idType = 0x00;
+[e = . . _CanCurrentData 0 0 -> -> 0 `i `uc ]
+"56
+[; ;main.c: 56:     CanCurrentData.frame.id = 0x387;
+[e = . . _CanCurrentData 0 1 -> -> -> 903 `i `l `ul ]
 "57
-[; ;main.c: 57:     uCAN_MSG CanReadyToDrive;
-[v _CanReadyToDrive `S3207 ~T0 @X0 1 a ]
-"58
-[; ;main.c: 58:     CanReadyToDrive.frame.idType = 0x00;
-[e = . . _CanReadyToDrive 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 57:     CanCurrentData.frame.dlc = 0x02;
+[e = . . _CanCurrentData 0 2 -> -> 2 `i `uc ]
 "59
-[; ;main.c: 59:     CanReadyToDrive.frame.id = 0x0D1;
-[e = . . _CanReadyToDrive 0 1 -> -> -> 209 `i `l `ul ]
+[; ;main.c: 59:     uCAN_MSG CanReadyToDrive;
+[v _CanReadyToDrive `S3207 ~T0 @X0 1 a ]
 "60
-[; ;main.c: 60:     CanReadyToDrive.frame.dlc = 0x01;
-[e = . . _CanReadyToDrive 0 2 -> -> 1 `i `uc ]
+[; ;main.c: 60:     CanReadyToDrive.frame.idType = 0x00;
+[e = . . _CanReadyToDrive 0 0 -> -> 0 `i `uc ]
 "61
-[; ;main.c: 61:     CanReadyToDrive.frame.data0 = 1;
-[e = . . _CanReadyToDrive 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 61:     CanReadyToDrive.frame.id = 0x0D1;
+[e = . . _CanReadyToDrive 0 1 -> -> -> 209 `i `l `ul ]
 "62
-[; ;main.c: 62:     _Bool ReadyToDriveSent = 0;
+[; ;main.c: 62:     CanReadyToDrive.frame.dlc = 0x01;
+[e = . . _CanReadyToDrive 0 2 -> -> 1 `i `uc ]
+"63
+[; ;main.c: 63:     CanReadyToDrive.frame.data0 = 1;
+[e = . . _CanReadyToDrive 0 3 -> -> 1 `i `uc ]
+"64
+[; ;main.c: 64:     _Bool ReadyToDriveSent = 0;
 [v _ReadyToDriveSent `a ~T0 @X0 1 a ]
 [e = _ReadyToDriveSent -> -> 0 `i `a ]
-"64
-[; ;main.c: 64:     while (1)
+"66
+[; ;main.c: 66:     while (1)
 [e :U 3211 ]
-"65
-[; ;main.c: 65:     {
+"67
+[; ;main.c: 67:     {
 {
-"68
-[; ;main.c: 68:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+"70
+[; ;main.c: 70:         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
 [v _current `us ~T0 @X0 1 a ]
 [e = _current ( _ADCC_GetSingleConversion (1 . `E22613 0 ]
-"69
-[; ;main.c: 69:         CanCurrentData.frame.data0 = current >> 8;
+"72
+[; ;main.c: 72:         CanCurrentData.frame.data0 = current >> 8;
 [e = . . _CanCurrentData 0 3 -> >> -> _current `ui -> 8 `i `uc ]
-"70
-[; ;main.c: 70:         CanCurrentData.frame.data1 = current & 0xFF;
+"73
+[; ;main.c: 73:         CanCurrentData.frame.data1 = current & 0xFF;
 [e = . . _CanCurrentData 0 4 -> & -> _current `ui -> -> 255 `i `ui `uc ]
-"71
-[; ;main.c: 71:         CAN_transmit(&CanCurrentData);
+"74
+[; ;main.c: 74:         CAN_transmit(&CanCurrentData);
 [e ( _CAN_transmit (1 &U _CanCurrentData ]
-"75
-[; ;main.c: 75:         if(!ReadyToDriveSent)
+"78
+[; ;main.c: 78:         if(!ReadyToDriveSent)
 [e $ ! ! != -> _ReadyToDriveSent `i -> 0 `i 3213  ]
-"76
-[; ;main.c: 76:         {
-{
 "79
-[; ;main.c: 79:             uint8_t ReadyToDrive = PORTCbits.RC3;
-[v _ReadyToDrive `uc ~T0 @X0 1 a ]
-[e = _ReadyToDrive . . _PORTCbits 0 3 ]
-"80
-[; ;main.c: 80:             if(ReadyToDrive)
-[e $ ! != -> _ReadyToDrive `i -> 0 `i 3214  ]
-"81
-[; ;main.c: 81:             {
+[; ;main.c: 79:         {
 {
 "82
-[; ;main.c: 82:                 CAN_transmit(&CanReadyToDrive);
-[e ( _CAN_transmit (1 &U _CanReadyToDrive ]
+[; ;main.c: 82:             uint8_t ReadyToDrive = PORTCbits.RC3;
+[v _ReadyToDrive `uc ~T0 @X0 1 a ]
+[e = _ReadyToDrive . . _PORTCbits 0 3 ]
 "83
-[; ;main.c: 83:                 ReadyToDriveSent = 1;
-[e = _ReadyToDriveSent -> -> 1 `i `a ]
+[; ;main.c: 83:             if(ReadyToDrive)
+[e $ ! != -> _ReadyToDrive `i -> 0 `i 3214  ]
 "84
-[; ;main.c: 84:             }
+[; ;main.c: 84:             {
+{
+"85
+[; ;main.c: 85:                 CAN_transmit(&CanReadyToDrive);
+[e ( _CAN_transmit (1 &U _CanReadyToDrive ]
+"86
+[; ;main.c: 86:                 ReadyToDriveSent = 1;
+[e = _ReadyToDriveSent -> -> 1 `i `a ]
+"87
+[; ;main.c: 87:             }
 }
 [e :U 3214 ]
-"85
-[; ;main.c: 85:         }
+"88
+[; ;main.c: 88:         }
 }
 [e :U 3213 ]
-"88
-[; ;main.c: 88:         _delay((unsigned long)((500)*(1000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 1000000 `l `d .4000.0 `ul ]
-"89
-[; ;main.c: 89:     }
+"91
+[; ;main.c: 91:         _delay((unsigned long)((500)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"92
+[; ;main.c: 92:     }
 }
 [e :U 3210 ]
 [e $U 3211  ]
 [e :U 3212 ]
-"90
-[; ;main.c: 90: }
+"93
+[; ;main.c: 93: }
 [e :UE 3209 ]
 }

@@ -1,4 +1,4 @@
-# 1 "mcc_generated_files/mcc.c"
+# 1 "main.c"
 # 1 "<built-in>" 1
 # 1 "<built-in>" 3
 # 288 "<built-in>" 3
@@ -6,10 +6,10 @@
 # 1 "<built-in>" 2
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
-# 1 "mcc_generated_files/mcc.c" 2
-# 47 "mcc_generated_files/mcc.c"
-# 1 "mcc_generated_files/mcc.h" 1
-# 49 "mcc_generated_files/mcc.h"
+# 1 "main.c" 2
+# 44 "main.c"
+# 1 "./mcc_generated_files/mcc.h" 1
+# 49 "./mcc_generated_files/mcc.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -36353,17 +36353,17 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 49 "mcc_generated_files/mcc.h" 2
+# 49 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/device_config.h" 1
-# 50 "mcc_generated_files/mcc.h" 2
+# 1 "./mcc_generated_files/device_config.h" 1
+# 50 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/pin_manager.h" 1
-# 142 "mcc_generated_files/pin_manager.h"
+# 1 "./mcc_generated_files/pin_manager.h" 1
+# 142 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 154 "mcc_generated_files/pin_manager.h"
+# 154 "./mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
-# 51 "mcc_generated_files/mcc.h" 2
+# 51 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 1 3
 # 22 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 3
@@ -36450,10 +36450,10 @@ typedef int32_t int_fast32_t;
 typedef uint16_t uint_fast16_t;
 typedef uint32_t uint_fast32_t;
 # 144 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdint.h" 2 3
-# 52 "mcc_generated_files/mcc.h" 2
+# 52 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\stdbool.h" 1 3
-# 53 "mcc_generated_files/mcc.h" 2
+# 53 "./mcc_generated_files/mcc.h" 2
 
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.32\\pic\\include\\c99\\conio.h" 1 3
 
@@ -36486,19 +36486,19 @@ extern __bit kbhit(void);
 
 extern char * cgets(char *);
 extern void cputs(const char *);
-# 54 "mcc_generated_files/mcc.h" 2
+# 54 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/interrupt_manager.h" 1
-# 87 "mcc_generated_files/interrupt_manager.h"
+# 1 "./mcc_generated_files/interrupt_manager.h" 1
+# 87 "./mcc_generated_files/interrupt_manager.h"
 void INTERRUPT_Initialize (void);
-# 55 "mcc_generated_files/mcc.h" 2
+# 55 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/adcc.h" 1
-# 72 "mcc_generated_files/adcc.h"
+# 1 "./mcc_generated_files/adcc.h" 1
+# 72 "./mcc_generated_files/adcc.h"
 typedef uint16_t adc_result_t;
 
 typedef __uint24 uint24_t;
-# 89 "mcc_generated_files/adcc.h"
+# 89 "./mcc_generated_files/adcc.h"
 typedef enum
 {
     channel_ANC0 = 0x10,
@@ -36508,64 +36508,64 @@ typedef enum
     channel_FVR_Buffer1 = 0x3E,
     channel_FVR_Buffer2 = 0x3F
 } adcc_channel_t;
-# 131 "mcc_generated_files/adcc.h"
+# 131 "./mcc_generated_files/adcc.h"
 void ADCC_Initialize(void);
-# 160 "mcc_generated_files/adcc.h"
+# 160 "./mcc_generated_files/adcc.h"
 void ADCC_StartConversion(adcc_channel_t channel);
-# 190 "mcc_generated_files/adcc.h"
+# 190 "./mcc_generated_files/adcc.h"
 _Bool ADCC_IsConversionDone(void);
-# 222 "mcc_generated_files/adcc.h"
+# 222 "./mcc_generated_files/adcc.h"
 adc_result_t ADCC_GetConversionResult(void);
-# 253 "mcc_generated_files/adcc.h"
+# 253 "./mcc_generated_files/adcc.h"
 adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
-# 278 "mcc_generated_files/adcc.h"
+# 278 "./mcc_generated_files/adcc.h"
 void ADCC_StopConversion(void);
-# 305 "mcc_generated_files/adcc.h"
+# 305 "./mcc_generated_files/adcc.h"
 void ADCC_SetStopOnInterrupt(void);
-# 330 "mcc_generated_files/adcc.h"
+# 330 "./mcc_generated_files/adcc.h"
 void ADCC_DischargeSampleCapacitor(void);
-# 356 "mcc_generated_files/adcc.h"
+# 356 "./mcc_generated_files/adcc.h"
 void ADCC_LoadAcquisitionRegister(uint16_t);
-# 382 "mcc_generated_files/adcc.h"
+# 382 "./mcc_generated_files/adcc.h"
 void ADCC_SetPrechargeTime(uint16_t);
-# 407 "mcc_generated_files/adcc.h"
+# 407 "./mcc_generated_files/adcc.h"
 void ADCC_SetRepeatCount(uint8_t);
-# 435 "mcc_generated_files/adcc.h"
+# 435 "./mcc_generated_files/adcc.h"
 uint8_t ADCC_GetCurrentCountofConversions(void);
-# 459 "mcc_generated_files/adcc.h"
+# 459 "./mcc_generated_files/adcc.h"
 void ADCC_ClearAccumulator(void);
-# 484 "mcc_generated_files/adcc.h"
+# 484 "./mcc_generated_files/adcc.h"
 uint24_t ADCC_GetAccumulatorValue(void);
-# 512 "mcc_generated_files/adcc.h"
+# 512 "./mcc_generated_files/adcc.h"
 _Bool ADCC_HasAccumulatorOverflowed(void);
-# 537 "mcc_generated_files/adcc.h"
+# 537 "./mcc_generated_files/adcc.h"
 uint16_t ADCC_GetFilterValue(void);
-# 565 "mcc_generated_files/adcc.h"
+# 565 "./mcc_generated_files/adcc.h"
 uint16_t ADCC_GetPreviousResult(void);
-# 591 "mcc_generated_files/adcc.h"
+# 591 "./mcc_generated_files/adcc.h"
 void ADCC_DefineSetPoint(uint16_t);
-# 617 "mcc_generated_files/adcc.h"
+# 617 "./mcc_generated_files/adcc.h"
 void ADCC_SetUpperThreshold(uint16_t);
-# 643 "mcc_generated_files/adcc.h"
+# 643 "./mcc_generated_files/adcc.h"
 void ADCC_SetLowerThreshold(uint16_t);
-# 670 "mcc_generated_files/adcc.h"
+# 670 "./mcc_generated_files/adcc.h"
 uint16_t ADCC_GetErrorCalculation(void);
-# 697 "mcc_generated_files/adcc.h"
+# 697 "./mcc_generated_files/adcc.h"
 void ADCC_EnableDoubleSampling(void);
-# 721 "mcc_generated_files/adcc.h"
+# 721 "./mcc_generated_files/adcc.h"
 void ADCC_EnableContinuousConversion(void);
-# 745 "mcc_generated_files/adcc.h"
+# 745 "./mcc_generated_files/adcc.h"
 void ADCC_DisableContinuousConversion(void);
-# 773 "mcc_generated_files/adcc.h"
+# 773 "./mcc_generated_files/adcc.h"
 _Bool ADCC_HasErrorCrossedUpperThreshold(void);
-# 801 "mcc_generated_files/adcc.h"
+# 801 "./mcc_generated_files/adcc.h"
 _Bool ADCC_HasErrorCrossedLowerThreshold(void);
-# 828 "mcc_generated_files/adcc.h"
+# 828 "./mcc_generated_files/adcc.h"
 uint8_t ADCC_GetConversionStageStatus(void);
-# 56 "mcc_generated_files/mcc.h" 2
+# 56 "./mcc_generated_files/mcc.h" 2
 
-# 1 "mcc_generated_files/ecan.h" 1
-# 62 "mcc_generated_files/ecan.h"
+# 1 "./mcc_generated_files/ecan.h" 1
+# 62 "./mcc_generated_files/ecan.h"
 typedef union {
 
     struct {
@@ -36583,77 +36583,86 @@ typedef union {
     } frame;
     uint8_t array[14];
 } uCAN_MSG;
-# 115 "mcc_generated_files/ecan.h"
+# 115 "./mcc_generated_files/ecan.h"
 void ECAN_Initialize(void);
-# 137 "mcc_generated_files/ecan.h"
+# 137 "./mcc_generated_files/ecan.h"
 void CAN_sleep(void);
-# 158 "mcc_generated_files/ecan.h"
+# 158 "./mcc_generated_files/ecan.h"
 uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
-# 182 "mcc_generated_files/ecan.h"
+# 182 "./mcc_generated_files/ecan.h"
 uint8_t CAN_receive(uCAN_MSG *tempCanMsg);
-# 204 "mcc_generated_files/ecan.h"
+# 204 "./mcc_generated_files/ecan.h"
 uint8_t CAN_messagesInBuffer(void);
-# 228 "mcc_generated_files/ecan.h"
+# 228 "./mcc_generated_files/ecan.h"
 uint8_t CAN_isBusOff(void);
-# 252 "mcc_generated_files/ecan.h"
+# 252 "./mcc_generated_files/ecan.h"
 uint8_t CAN_isRXErrorPassive(void);
-# 276 "mcc_generated_files/ecan.h"
+# 276 "./mcc_generated_files/ecan.h"
 uint8_t CAN_isTXErrorPassive(void);
-# 316 "mcc_generated_files/ecan.h"
+# 316 "./mcc_generated_files/ecan.h"
 void ECAN_SetWakeUpInterruptHandler(void (*handler)(void));
-# 331 "mcc_generated_files/ecan.h"
+# 331 "./mcc_generated_files/ecan.h"
 void ECAN_WAKI_ISR(void);
-# 57 "mcc_generated_files/mcc.h" 2
-# 72 "mcc_generated_files/mcc.h"
+# 57 "./mcc_generated_files/mcc.h" 2
+# 72 "./mcc_generated_files/mcc.h"
 void SYSTEM_Initialize(void);
-# 85 "mcc_generated_files/mcc.h"
+# 85 "./mcc_generated_files/mcc.h"
 void OSCILLATOR_Initialize(void);
-# 98 "mcc_generated_files/mcc.h"
+# 98 "./mcc_generated_files/mcc.h"
 void PMD_Initialize(void);
-# 47 "mcc_generated_files/mcc.c" 2
+# 44 "main.c" 2
 
 
 
-void SYSTEM_Initialize(void)
-{
-    INTERRUPT_Initialize();
-    PMD_Initialize();
-    PIN_MANAGER_Initialize();
-    OSCILLATOR_Initialize();
-    ADCC_Initialize();
-    ECAN_Initialize();
-}
 
-void OSCILLATOR_Initialize(void)
+
+void main(void)
 {
 
-    OSCCON1 = 0x60;
+    SYSTEM_Initialize();
 
-    OSCCON3 = 0x00;
 
-    OSCEN = 0x00;
 
-    OSCFRQ = 0x08;
+    uCAN_MSG CanCurrentData;
+    CanCurrentData.frame.idType = 0x00;
+    CanCurrentData.frame.id = 0x387;
+    CanCurrentData.frame.dlc = 0x02;
 
-    OSCTUNE = 0x00;
-}
+    uCAN_MSG CanReadyToDrive;
+    CanReadyToDrive.frame.idType = 0x00;
+    CanReadyToDrive.frame.id = 0x0D1;
+    CanReadyToDrive.frame.dlc = 0x01;
+    CanReadyToDrive.frame.data0 = 1;
+    _Bool ReadyToDriveSent = 0;
 
-void PMD_Initialize(void)
-{
+    while (1)
+    {
 
-    PMD0 = 0x00;
 
-    PMD1 = 0x00;
+        ADCC_Initialize();
+        ADCC_StartConversion(channel_ANC0);
+        while(!ADCC_IsConversionDone());
+        uint16_t current = ADCC_GetConversionResult();
 
-    PMD2 = 0x00;
+        CanCurrentData.frame.data0 = current >> 8;
+        CanCurrentData.frame.data1 = current & 0xFF;
+        CAN_transmit(&CanCurrentData);
 
-    PMD3 = 0x00;
 
-    PMD4 = 0x00;
 
-    PMD5 = 0x00;
+        if(!ReadyToDriveSent)
+        {
 
-    PMD6 = 0x00;
 
-    PMD7 = 0x00;
+            uint8_t ReadyToDrive = PORTCbits.RC3;
+            if(ReadyToDrive)
+            {
+                CAN_transmit(&CanReadyToDrive);
+                ReadyToDriveSent = 1;
+            }
+        }
+
+
+        _delay((unsigned long)((500)*(64000000/4000.0)));
+    }
 }

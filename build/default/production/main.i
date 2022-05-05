@@ -36619,6 +36619,8 @@ void PMD_Initialize(void);
 void main(void)
 {
 
+    SYSTEM_Initialize();
+
     uCAN_MSG CanCurrentData;
     CanCurrentData.frame.idType = 0x00;
     CanCurrentData.frame.id = 0x387;
@@ -36636,6 +36638,7 @@ void main(void)
 
 
         uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+
         CanCurrentData.frame.data0 = current >> 8;
         CanCurrentData.frame.data1 = current & 0xFF;
         CAN_transmit(&CanCurrentData);
@@ -36655,6 +36658,6 @@ void main(void)
         }
 
 
-        _delay((unsigned long)((500)*(1000000/4000.0)));
+        _delay((unsigned long)((500)*(64000000/4000.0)));
     }
 }

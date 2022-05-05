@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\PEI-Firmware-FE9.production.hex">
+  <executable name="dist/default/debug\PEI-Firmware-FE9.debug.hex">
     <memory name="program">
       <units>bytes</units>
       <length>30464</length>
-      <used>2116</used>
-      <free>28348</free>
+      <used>2154</used>
+      <free>28310</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
