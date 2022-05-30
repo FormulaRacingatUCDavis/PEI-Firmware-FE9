@@ -31,8 +31,17 @@ void main(void)
     {
         // get current sensor data (RA6/RC0 ???)
         // TODO: acquiring this conversion will need to change for current sensor; need 2 ADC channels
-        uint16_t current = ADCC_GetSingleConversion(channel_ANC0);
+        uint16_t current_analog_1 = ADCC_GetSingleConversion(CURRENT_ANALOG_1);
+        uint16_t current_analog_2 = ADCC_GetSingleConversion(CURRENT_ANALOG_2);
+        uint16_t current = current_analog_1;
         
+        if (current_analog_1 < 0.2/*0.2V*/) { //RC0 invalid, use RC3
+            current =  -1 * current_analog_2;
+        }
+        if (current_analog_2 < 0.2/*0.2V*/) { //RC3 invalid, use RC0
+            current = current_analog_1;
+        }
+
         // send data via PCAN to BMS main
         CanCurrentData.frame.data0 = current >> 8; // upper bits
         CanCurrentData.frame.data1 = current & 0xFF;
