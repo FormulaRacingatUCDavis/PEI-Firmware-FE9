@@ -3,18 +3,30 @@
 [d edition pro ]
 [d chip 18F26K83 ]
 [d frameptr 16353 ]
-"113 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
+"113 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/adcc.c
 [e E22597 . `uc
-channel_ANC0 16
+CURRENT_ANALOG_1 16
+CURRENT_ANALOG_2 19
 channel_VSS 59
 channel_Temp 60
 channel_DAC1 61
 channel_FVR_Buffer1 62
 channel_FVR_Buffer2 63
 ]
-"70 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
+"27 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\main.c
+[e E22691 . `ui
+VEHICLE_STATE 192
+SWITCHES 208
+TORQUE_REQUEST_COMMAND 1894
+BMS_STATUS 896
+PEI_CURRENT 903
+BMS_VOLTAGES 904
+BMS_TEMPERATURES 905
+]
+"34
 [e E22613 . `uc
-channel_ANC0 16
+CURRENT_ANALOG_1 16
+CURRENT_ANALOG_2 19
 channel_VSS 59
 channel_Temp 60
 channel_DAC1 61
@@ -45,13 +57,13 @@ channel_FVR_Buffer2 63
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.32\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"49 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
+"20 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\main.c
 [v _main main `(v  1 e 1 0 ]
-"62 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
+"62 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 "137
 [v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
-"63 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
+"63 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _WakeUpDefaultInterruptHandler WakeUpDefaultInterruptHandler `(v  1 s 1 WakeUpDefaultInterruptHandler ]
 "65
 [v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
@@ -67,17 +79,17 @@ channel_FVR_Buffer2 63
 [v _ECAN_SetWakeUpInterruptHandler ECAN_SetWakeUpInterruptHandler `(v  1 e 1 0 ]
 "444
 [v _ECAN_WAKI_ISR ECAN_WAKI_ISR `(v  1 e 1 0 ]
-"52 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 "58
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
-"50 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/mcc.c
+"50 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 "60
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 "74
 [v _PMD_Initialize PMD_Initialize `(v  1 e 1 0 ]
-"55 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/pin_manager.c
+"55 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 "270 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h
 [v _CIOCON CIOCON `VEuc  1 e 1 @14080 ]
@@ -99,25 +111,6 @@ channel_FVR_Buffer2 63
 [v _TRISB TRISB `VEuc  1 e 1 @16323 ]
 "4676
 [v _TRISC TRISC `VEuc  1 e 1 @16324 ]
-[s S1176 . 1 `uc 1 RC0 1 0 :1:0 
-`uc 1 RC1 1 0 :1:1 
-`uc 1 RC2 1 0 :1:2 
-`uc 1 RC3 1 0 :1:3 
-`uc 1 RC4 1 0 :1:4 
-`uc 1 RC5 1 0 :1:5 
-`uc 1 RC6 1 0 :1:6 
-`uc 1 RC7 1 0 :1:7 
-]
-"4919
-[s S1185 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 CCP2 1 0 :1:1 
-`uc 1 PA1 1 0 :1:2 
-]
-[s S1189 . 1 `uc 1 . 1 0 :1:0 
-`uc 1 PA2 1 0 :1:1 
-]
-[u S1192 . 1 `S1176 1 . 1 0 `S1185 1 . 1 0 `S1189 1 . 1 0 ]
-[v _PORTCbits PORTCbits `VES1192  1 e 1 @16332 ]
 [s S665 . 1 `uc 1 INT0EDG 1 0 :1:0 
 `uc 1 INT1EDG 1 0 :1:1 
 `uc 1 INT2EDG 1 0 :1:2 
@@ -494,7 +487,7 @@ channel_FVR_Buffer2 63
 [v _ADPREH ADPREH `VEuc  1 e 1 @16119 ]
 "52294
 [v _ADCON0 ADCON0 `VEuc  1 e 1 @16120 ]
-[s S777 . 1 `uc 1 GO 1 0 :1:0 
+[s S778 . 1 `uc 1 GO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM 1 0 :2:2 
 `uc 1 CS 1 0 :1:4 
@@ -503,7 +496,7 @@ channel_FVR_Buffer2 63
 `uc 1 ON 1 0 :1:7 
 ]
 "52338
-[s S785 . 1 `uc 1 ADGO 1 0 :1:0 
+[s S786 . 1 `uc 1 ADGO 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM 1 0 :2:2 
 `uc 1 ADCS 1 0 :1:4 
@@ -512,62 +505,62 @@ channel_FVR_Buffer2 63
 `uc 1 ADON 1 0 :1:7 
 ]
 "52338
-[s S793 . 1 `uc 1 DONE 1 0 :1:0 
+[s S794 . 1 `uc 1 DONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 FM0 1 0 :1:2 
 `uc 1 FM1 1 0 :1:3 
 ]
 "52338
-[s S798 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
+[s S799 . 1 `uc 1 GO_NOT_DONE 1 0 :1:0 
 ]
 "52338
-[s S800 . 1 `uc 1 GO_nDONE 1 0 :1:0 
+[s S801 . 1 `uc 1 GO_nDONE 1 0 :1:0 
 `uc 1 . 1 0 :1:1 
 `uc 1 ADFM0 1 0 :1:2 
 `uc 1 ADFM1 1 0 :1:3 
 ]
 "52338
-[s S805 . 1 `uc 1 . 1 0 :7:0 
+[s S806 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 ADCAL 1 0 :1:7 
 ]
 "52338
-[u S808 . 1 `S777 1 . 1 0 `S785 1 . 1 0 `S793 1 . 1 0 `S798 1 . 1 0 `S800 1 . 1 0 `S805 1 . 1 0 ]
+[u S809 . 1 `S778 1 . 1 0 `S786 1 . 1 0 `S794 1 . 1 0 `S799 1 . 1 0 `S801 1 . 1 0 `S806 1 . 1 0 ]
 "52338
 "52338
-[v _ADCON0bits ADCON0bits `VES808  1 e 1 @16120 ]
+[v _ADCON0bits ADCON0bits `VES809  1 e 1 @16120 ]
 "52433
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @16121 ]
-[s S1043 . 1 `uc 1 DSEN 1 0 :1:0 
+[s S1044 . 1 `uc 1 DSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 GPOL 1 0 :1:5 
 `uc 1 IPEN 1 0 :1:6 
 `uc 1 PPOL 1 0 :1:7 
 ]
 "52458
-[s S1049 . 1 `uc 1 ADDSEN 1 0 :1:0 
+[s S1050 . 1 `uc 1 ADDSEN 1 0 :1:0 
 `uc 1 . 1 0 :4:1 
 `uc 1 ADGPOL 1 0 :1:5 
 `uc 1 ADIPEN 1 0 :1:6 
 `uc 1 ADPPOL 1 0 :1:7 
 ]
 "52458
-[s S1055 . 1 `uc 1 . 1 0 :5:0 
+[s S1056 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 VCFG11 1 0 :1:5 
 ]
 "52458
-[u S1058 . 1 `S1043 1 . 1 0 `S1049 1 . 1 0 `S1055 1 . 1 0 ]
+[u S1059 . 1 `S1044 1 . 1 0 `S1050 1 . 1 0 `S1056 1 . 1 0 ]
 "52458
 "52458
-[v _ADCON1bits ADCON1bits `VES1058  1 e 1 @16121 ]
+[v _ADCON1bits ADCON1bits `VES1059  1 e 1 @16121 ]
 "52508
 [v _ADCON2 ADCON2 `VEuc  1 e 1 @16122 ]
-[s S904 . 1 `uc 1 MODE 1 0 :3:0 
+[s S905 . 1 `uc 1 MODE 1 0 :3:0 
 `uc 1 ACLR 1 0 :1:3 
 `uc 1 CRS 1 0 :3:4 
 `uc 1 PSIS 1 0 :1:7 
 ]
 "52556
-[s S909 . 1 `uc 1 ADMD0 1 0 :1:0 
+[s S910 . 1 `uc 1 ADMD0 1 0 :1:0 
 `uc 1 ADMD1 1 0 :1:1 
 `uc 1 ADMD2 1 0 :1:2 
 `uc 1 ADACLR 1 0 :1:3 
@@ -577,12 +570,12 @@ channel_FVR_Buffer2 63
 `uc 1 ADPSIS 1 0 :1:7 
 ]
 "52556
-[s S918 . 1 `uc 1 ADMD 1 0 :3:0 
+[s S919 . 1 `uc 1 ADMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCRS 1 0 :3:4 
 ]
 "52556
-[s S922 . 1 `uc 1 MODE0 1 0 :1:0 
+[s S923 . 1 `uc 1 MODE0 1 0 :1:0 
 `uc 1 MODE1 1 0 :1:1 
 `uc 1 MODE2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -591,29 +584,29 @@ channel_FVR_Buffer2 63
 `uc 1 CRS2 1 0 :1:6 
 ]
 "52556
-[s S930 . 1 `uc 1 MD 1 0 :3:0 
+[s S931 . 1 `uc 1 MD 1 0 :3:0 
 ]
 "52556
-[s S932 . 1 `uc 1 MD0 1 0 :1:0 
+[s S933 . 1 `uc 1 MD0 1 0 :1:0 
 `uc 1 MD1 1 0 :1:1 
 `uc 1 MD2 1 0 :1:2 
 ]
 "52556
-[s S936 . 1 `uc 1 ADMODE 1 0 :3:0 
+[s S937 . 1 `uc 1 ADMODE 1 0 :3:0 
 ]
 "52556
-[u S938 . 1 `S904 1 . 1 0 `S909 1 . 1 0 `S918 1 . 1 0 `S922 1 . 1 0 `S930 1 . 1 0 `S932 1 . 1 0 `S936 1 . 1 0 ]
+[u S939 . 1 `S905 1 . 1 0 `S910 1 . 1 0 `S919 1 . 1 0 `S923 1 . 1 0 `S931 1 . 1 0 `S933 1 . 1 0 `S937 1 . 1 0 ]
 "52556
 "52556
-[v _ADCON2bits ADCON2bits `VES938  1 e 1 @16122 ]
+[v _ADCON2bits ADCON2bits `VES939  1 e 1 @16122 ]
 "52686
 [v _ADCON3 ADCON3 `VEuc  1 e 1 @16123 ]
-[s S849 . 1 `uc 1 TMD 1 0 :3:0 
+[s S850 . 1 `uc 1 TMD 1 0 :3:0 
 `uc 1 SOI 1 0 :1:3 
 `uc 1 CALC 1 0 :3:4 
 ]
 "52721
-[s S853 . 1 `uc 1 ADTMD0 1 0 :1:0 
+[s S854 . 1 `uc 1 ADTMD0 1 0 :1:0 
 `uc 1 ADTMD1 1 0 :1:1 
 `uc 1 ADTMD2 1 0 :1:2 
 `uc 1 ADSOI 1 0 :1:3 
@@ -622,12 +615,12 @@ channel_FVR_Buffer2 63
 `uc 1 ADCALC2 1 0 :1:6 
 ]
 "52721
-[s S861 . 1 `uc 1 ADTMD 1 0 :3:0 
+[s S862 . 1 `uc 1 ADTMD 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 ADCALC 1 0 :3:4 
 ]
 "52721
-[s S865 . 1 `uc 1 TMD0 1 0 :1:0 
+[s S866 . 1 `uc 1 TMD0 1 0 :1:0 
 `uc 1 TMD1 1 0 :1:1 
 `uc 1 TMD2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -636,13 +629,13 @@ channel_FVR_Buffer2 63
 `uc 1 CALC2 1 0 :1:6 
 ]
 "52721
-[u S873 . 1 `S849 1 . 1 0 `S853 1 . 1 0 `S861 1 . 1 0 `S865 1 . 1 0 ]
+[u S874 . 1 `S850 1 . 1 0 `S854 1 . 1 0 `S862 1 . 1 0 `S866 1 . 1 0 ]
 "52721
 "52721
-[v _ADCON3bits ADCON3bits `VES873  1 e 1 @16123 ]
+[v _ADCON3bits ADCON3bits `VES874  1 e 1 @16123 ]
 "52816
 [v _ADSTAT ADSTAT `VEuc  1 e 1 @16124 ]
-[s S983 . 1 `uc 1 STAT 1 0 :3:0 
+[s S984 . 1 `uc 1 STAT 1 0 :3:0 
 `uc 1 . 1 0 :1:3 
 `uc 1 MATH 1 0 :1:4 
 `uc 1 LTHR 1 0 :1:5 
@@ -650,7 +643,7 @@ channel_FVR_Buffer2 63
 `uc 1 OV 1 0 :1:7 
 ]
 "52851
-[s S990 . 1 `uc 1 ADSTAT0 1 0 :1:0 
+[s S991 . 1 `uc 1 ADSTAT0 1 0 :1:0 
 `uc 1 ADSTAT1 1 0 :1:1 
 `uc 1 ADSTAT2 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -660,20 +653,20 @@ channel_FVR_Buffer2 63
 `uc 1 ADAOV 1 0 :1:7 
 ]
 "52851
-[s S999 . 1 `uc 1 ADSTAT 1 0 :3:0 
+[s S1000 . 1 `uc 1 ADSTAT 1 0 :3:0 
 `uc 1 . 1 0 :4:3 
 `uc 1 ADOV 1 0 :1:7 
 ]
 "52851
-[s S1003 . 1 `uc 1 STAT0 1 0 :1:0 
+[s S1004 . 1 `uc 1 STAT0 1 0 :1:0 
 `uc 1 STAT1 1 0 :1:1 
 `uc 1 STAT2 1 0 :1:2 
 ]
 "52851
-[u S1007 . 1 `S983 1 . 1 0 `S990 1 . 1 0 `S999 1 . 1 0 `S1003 1 . 1 0 ]
+[u S1008 . 1 `S984 1 . 1 0 `S991 1 . 1 0 `S1000 1 . 1 0 `S1004 1 . 1 0 ]
 "52851
 "52851
-[v _ADSTATbits ADSTATbits `VES1007  1 e 1 @16124 ]
+[v _ADSTATbits ADSTATbits `VES1008  1 e 1 @16124 ]
 "52941
 [v _ADREF ADREF `VEuc  1 e 1 @16125 ]
 "53023
@@ -771,26 +764,24 @@ channel_FVR_Buffer2 63
 [v _COMSTATbits COMSTATbits `VES507  1 e 1 @16272 ]
 "64615
 [v _ECANCON ECANCON `VEuc  1 e 1 @16273 ]
-"54 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
+"54 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _WakeUpInterruptHandler WakeUpInterruptHandler `*.37(v  1 s 2 WakeUpInterruptHandler ]
-"49 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\main.c
+"20 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"82
-[v main@ReadyToDrive ReadyToDrive `uc  1 a 1 26 ]
-"70
-[v main@current current `us  1 a 2 28 ]
+"38
+[v main@current current `us  1 a 2 30 ]
+"35
+[v main@current_analog_2 current_analog_2 `us  1 a 2 28 ]
+"34
+[v main@current_analog_1 current_analog_1 `us  1 a 2 26 ]
 [s S209 . 14 `uc 1 idType 1 0 `ul 1 id 4 1 `uc 1 dlc 1 5 `uc 1 data0 1 6 `uc 1 data1 1 7 `uc 1 data2 1 8 `uc 1 data3 1 9 `uc 1 data4 1 10 `uc 1 data5 1 11 `uc 1 data6 1 12 `uc 1 data7 1 13 ]
-"54
+"25
 [u S221 . 14 `S209 1 frame 14 0 `[14]uc 1 array 14 0 ]
-[v main@CanCurrentData CanCurrentData `S221  1 a 14 44 ]
-"59
-[v main@CanReadyToDrive CanReadyToDrive `S221  1 a 14 30 ]
-"64
-[v main@ReadyToDriveSent ReadyToDriveSent `a  1 a 1 27 ]
-"93
+[v main@CanCurrentData CanCurrentData `S221  1 a 14 32 ]
+"48
 } 0
-"50 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/mcc.c
+"50 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/mcc.c
 [v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
 {
 "58
@@ -800,22 +791,22 @@ channel_FVR_Buffer2 63
 {
 "92
 } 0
-"55 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/pin_manager.c
+"55 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/pin_manager.c
 [v _PIN_MANAGER_Initialize PIN_MANAGER_Initialize `(v  1 e 1 0 ]
 {
 "117
 } 0
-"60 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/mcc.c
+"60 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/mcc.c
 [v _OSCILLATOR_Initialize OSCILLATOR_Initialize `(v  1 e 1 0 ]
 {
 "72
 } 0
-"52 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
+"52 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_Initialize INTERRUPT_Initialize `(v  1 e 1 0 ]
 {
 "56
 } 0
-"65 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
+"65 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _ECAN_Initialize ECAN_Initialize `(v  1 e 1 0 ]
 {
 "152
@@ -826,12 +817,12 @@ channel_FVR_Buffer2 63
 [v ECAN_SetWakeUpInterruptHandler@handler handler `*.37(v  1 p 2 0 ]
 "442
 } 0
-"62 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
+"62 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/adcc.c
 [v _ADCC_Initialize ADCC_Initialize `(v  1 e 1 0 ]
 {
 "111
 } 0
-"165 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
+"165 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _CAN_transmit CAN_transmit `(uc  1 e 1 0 ]
 {
 "169
@@ -862,7 +853,7 @@ channel_FVR_Buffer2 63
 [v convertCANid2Reg@passedInSIDL passedInSIDL `*.39uc  1 p 2 11 ]
 "437
 } 0
-"137 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/adcc.c
+"137 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/adcc.c
 [v _ADCC_GetSingleConversion ADCC_GetSingleConversion `(us  1 e 2 0 ]
 {
 [v ADCC_GetSingleConversion@channel channel `E22597  1 a 1 wreg ]
@@ -871,12 +862,12 @@ channel_FVR_Buffer2 63
 [v ADCC_GetSingleConversion@channel channel `E22597  1 a 1 4 ]
 "160
 } 0
-"58 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
+"58 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/interrupt_manager.c
 [v _INTERRUPT_InterruptManager INTERRUPT_InterruptManager `IIH(v  1 e 1 0 ]
 {
 "69
 } 0
-"444 C:\Users\leoja\Documents\GitHub\PEI-Firmware-FE9\mcc_generated_files/ecan.c
+"444 C:\Users\Melody\Desktop\Programming_Stuff\FRUCD\PEI-Firmware-FE9\mcc_generated_files/ecan.c
 [v _ECAN_WAKI_ISR ECAN_WAKI_ISR `(v  1 e 1 0 ]
 {
 "448
