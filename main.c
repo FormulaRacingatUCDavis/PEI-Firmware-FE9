@@ -22,10 +22,10 @@ void main(void)
     
     SYSTEM_Initialize(); //this got deleted somehow, its very important
     
-    uCAN_MSG CanCurrentData; 
-    CanCurrentData.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
-    CanCurrentData.frame.id = PEI_CURRENT;
-    CanCurrentData.frame.dlc = 0x02;
+    uCAN_MSG can_current_data; 
+    can_current_data.frame.idType = dSTANDARD_CAN_MSG_ID_2_0B;
+    can_current_data.frame.id = PEI_CURRENT;
+    can_current_data.frame.dlc = 0x03;
     
     while (1)
     {
@@ -36,12 +36,21 @@ void main(void)
         
         // current = value of whichever channel is active (current -> 0 if inactive)
         uint16_t current = current_analog_2 - current_analog_1; 
+        
+        uint8_t shutdown_flags = 0;
+        shutdown_flags |= (IMD_OK_5V_GetValue() << 5);
+        shutdown_flags |= (BMS_OK_GetValue() << 4);
+        shutdown_flags |= (SD_HVMS_FINAL_5V_GetValue() << 3);
+        shutdown_flags |= (AIR1_5V_GetValue() << 2);
+        shutdown_flags |= (AIR2_5V_GetValue() << 1);
+        shutdown_flags |= (PRECHARGE_5V_GetValue() << 0);
 
         // send data via PCAN to BMS main
-        // this is in 2's complement
-        CanCurrentData.frame.data0 = current >> 8; // upper bits
-        CanCurrentData.frame.data1 = current & 0xFF;
-        CAN_transmit(&CanCurrentData);
+        // note: uses 2's complement
+        can_current_data.frame.data0 = current >> 8; // upper bits
+        can_current_data.frame.data1 = current & 0xFF; // lower bits
+        can_current_data.frame.data2 = shutdown_flags;
+        CAN_transmit(&can_current_data);
         
         
         __delay_ms(500);
