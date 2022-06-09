@@ -37,13 +37,26 @@ void main(void)
         // current = value of whichever channel is active (current -> 0 if inactive)
         uint16_t current = current_analog_2 - current_analog_1; 
         
+        // shutdown flags
         uint8_t shutdown_flags = 0;
-        shutdown_flags |= (IMD_OK_5V_GetValue() << 5);
-        shutdown_flags |= (BMS_OK_GetValue() << 4);
-        shutdown_flags |= (SD_HVMS_FINAL_5V_GetValue() << 3);
-        shutdown_flags |= (AIR1_5V_GetValue() << 2);
-        shutdown_flags |= (AIR2_5V_GetValue() << 1);
-        shutdown_flags |= (PRECHARGE_5V_GetValue() << 0);
+        
+        if (IMD_OK_5V_GetValue()) { shutdown_flags |= (1 << 5); }
+        else { shutdown_flags &= (0b011111); }
+        
+        if (BMS_OK_GetValue()) { shutdown_flags |= (1 << 4); }
+        else { shutdown_flags &= (0b101111); }
+        
+        if (SD_HVMS_FINAL_5V_GetValue()) { shutdown_flags |= (1 << 3); }
+        else { shutdown_flags &= (0b110111); }
+        
+        if (AIR1_5V_GetValue()) { shutdown_flags |= (1 << 2); }
+        else { shutdown_flags &= (0b111011); }
+        
+        if (AIR2_5V_GetValue()) { shutdown_flags |= (1 << 1); }
+        else { shutdown_flags &= (0b111101); }
+        
+        if (PRECHARGE_5V_GetValue()) { shutdown_flags |= (1 << 0); }
+        else { shutdown_flags &= (0b111110); }
 
         // send data via PCAN to BMS main
         // note: uses 2's complement
