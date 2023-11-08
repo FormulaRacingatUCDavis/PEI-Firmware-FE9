@@ -6,7 +6,7 @@ Linker command line:
   -pivt0x8=08h -cn \
   -h+dist/default/production\PEI-Firmware-FE9.production.sym \
   --cmf=dist/default/production\PEI-Firmware-FE9.production.cmf -z \
-  -Q18F26K83 -oC:\Users\Melody\AppData\Local\Temp\xcAskpc.4 \
+  -Q18F26K83 -oC:\Users\leoja\AppData\Local\Temp\xcAsasg.5 \
   --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/PEI-Firmware-FE9.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=060h-0FFFh -pstack=STACK \
@@ -27,7 +27,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\Melody\AppData\Local\Temp\xcAskpc.o \
+  C:\Users\leoja\AppData\Local\Temp\xcAsasg.o \
   dist/default/production\PEI-Firmware-FE9.production.o 
 
 Object code version is 3.11
@@ -37,7 +37,7 @@ Machine type is 18F26K83
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Melody\AppData\Local\Temp\xcAskpc.o
+C:\Users\leoja\AppData\Local\Temp\xcAsasg.o
                 idloc                            200000   200000       10        0       5
                 config                           300000   300000        A        0       4
                 init                               7FFC     7FFC        4     3FFE       0
@@ -46,24 +46,24 @@ dist/default/production\PEI-Firmware-FE9.production.o
                 idloc                            200000   200000       10        0       5
                 config                           300000   300000        A        0       4
                 ivt0x8                                8        8       12        4       0
-                text14                             780C     780C        2     3C06       0
-                text13                             7868     7868       20     3C34       0
-                text12                             7888     7888       24     3C44       0
-                text11                             78D0     78D0       32     3C68       0
+                text14                             77A6     77A6        2     3BD3       0
+                text13                             7802     7802       20     3C01       0
+                text12                             7822     7822       24     3C11       0
+                text11                             786A     786A       32     3C35       0
                 text10                             7B0E     7B0E      198     3D87       0
                 text9                              7CA6     7CA6      356     3E53       0
-                text8                              795C     795C       5C     3CAE       0
-                text7                              7812     7812        A     3C09       0
-                text6                              7A30     7A30       DE     3D18       0
-                text5                              780E     780E        4     3C07       0
-                text4                              781C     781C       18     3C0E       0
-                text3                              7902     7902       5A     3C81       0
-                text2                              78AC     78AC       24     3C56       0
-                text1                              7834     7834       1A     3C1A       0
-                text0                              79B8     79B8       78     3CDC       0
-                cstackCOMRAM                          1        1       2E        1       1
-                bssCOMRAM                            2F       2F        2        1       1
-                cinit                              784E     784E       1A     3C27       0
+                text8                              78F6     78F6       5C     3C7B       0
+                text7                              77AC     77AC        A     3BD6       0
+                text6                              7952     7952       DE     3CA9       0
+                text5                              77A8     77A8        4     3BD4       0
+                text4                              77B6     77B6       18     3BDB       0
+                text3                              789C     789C       5A     3C4E       0
+                text2                              7846     7846       24     3C23       0
+                text1                              77CE     77CE       1A     3BE7       0
+                text0                              7A30     7A30       DE     3D18       0
+                cstackCOMRAM                          1        1       2F        1       1
+                bssCOMRAM                            30       30        2        1       1
+                cinit                              77E8     77E8       1A     3BF4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -72,22 +72,22 @@ TOTAL           Name                               Link     Load   Length     Sp
                 init                               7FFC     7FFC        4         0
                 reset_vec                             0        0        4         0
                 ivt0x8                                8        8       12         0
-                text14                             780C     780C        2         0
-                text13                             7868     7868       20         0
-                text12                             7888     7888       24         0
-                text11                             78D0     78D0       32         0
+                text14                             77A6     77A6        2         0
+                text13                             7802     7802       20         0
+                text12                             7822     7822       24         0
+                text11                             786A     786A       32         0
                 text10                             7B0E     7B0E      198         0
                 text9                              7CA6     7CA6      356         0
-                text8                              795C     795C       5C         0
-                text7                              7812     7812        A         0
-                text6                              7A30     7A30       DE         0
-                text5                              780E     780E        4         0
-                text4                              781C     781C       18         0
-                text3                              7902     7902       5A         0
-                text2                              78AC     78AC       24         0
-                text1                              7834     7834       1A         0
-                text0                              79B8     79B8       78         0
-                cinit                              784E     784E       1A         0
+                text8                              78F6     78F6       5C         0
+                text7                              77AC     77AC        A         0
+                text6                              7952     7952       DE         0
+                text5                              77A8     77A8        4         0
+                text4                              77B6     77B6       18         0
+                text3                              789C     789C       5A         0
+                text2                              7846     7846       24         0
+                text1                              77CE     77CE       1A         0
+                text0                              7A30     7A30       DE         0
+                cinit                              77E8     77E8       1A         0
 
         CLASS   CONST          
 
@@ -96,8 +96,8 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                cstackCOMRAM                          1        1       2E         1
-                bssCOMRAM                            2F       2F        2         1
+                cstackCOMRAM                          1        1       2F         1
+                bssCOMRAM                            30       30        2         1
 
         CLASS   ABS1           
 
@@ -154,22 +154,22 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000030  000031         1       1  COMRAM  
+                cstackCOMRAM                   000001  000031  000032         1       1  COMRAM  
                 ivt0x8                         000008  000012  00001A         4       0  CODE    
-                text14                         00780C  000002  00780E      3C06       0  CODE    
-                text5                          00780E  000004  007812      3C07       0  CODE    
-                text7                          007812  00000A  00781C      3C09       0  CODE    
-                text4                          00781C  000018  007834      3C0E       0  CODE    
-                text1                          007834  00001A  00784E      3C1A       0  CODE    
-                cinit                          00784E  00001A  007868      3C27       0  CODE    
-                text13                         007868  000020  007888      3C34       0  CODE    
-                text12                         007888  000024  0078AC      3C44       0  CODE    
-                text2                          0078AC  000024  0078D0      3C56       0  CODE    
-                text11                         0078D0  000032  007902      3C68       0  CODE    
-                text3                          007902  00005A  00795C      3C81       0  CODE    
-                text8                          00795C  00005C  0079B8      3CAE       0  CODE    
-                text0                          0079B8  000078  007A30      3CDC       0  CODE    
-                text6                          007A30  0000DE  007B0E      3D18       0  CODE    
+                text14                         0077A6  000002  0077A8      3BD3       0  CODE    
+                text5                          0077A8  000004  0077AC      3BD4       0  CODE    
+                text7                          0077AC  00000A  0077B6      3BD6       0  CODE    
+                text4                          0077B6  000018  0077CE      3BDB       0  CODE    
+                text1                          0077CE  00001A  0077E8      3BE7       0  CODE    
+                cinit                          0077E8  00001A  007802      3BF4       0  CODE    
+                text13                         007802  000020  007822      3C01       0  CODE    
+                text12                         007822  000024  007846      3C11       0  CODE    
+                text2                          007846  000024  00786A      3C23       0  CODE    
+                text11                         00786A  000032  00789C      3C35       0  CODE    
+                text3                          00789C  00005A  0078F6      3C4E       0  CODE    
+                text8                          0078F6  00005C  007952      3C7B       0  CODE    
+                text6                          007952  0000DE  007A30      3CA9       0  CODE    
+                text0                          007A30  0000DE  007B0E      3D18       0  CODE    
                 text10                         007B0E  000198  007CA6      3D87       0  CODE    
                 text9                          007CA6  000356  007FFC      3E53       0  CODE    
                 init                           007FFC  000004  008000      3FFE       0  CODE    
@@ -194,15 +194,15 @@ UNUSED ADDRESS RANGES
         BANK7            000700-0007FF              100
         BANK8            000800-0008FF              100
         BANK9            000900-0009FF              100
-        BIGRAM           000031-000FFF              FCF
-        CODE             000900-00780B             6F0C
-        COMRAM           000031-00005F               2F
-        CONST            000900-00780B             6F0C
+        BIGRAM           000032-000FFF              FCE
+        CODE             000900-0077A5             6EA6
+        COMRAM           000032-00005F               2E
+        CONST            000900-0077A5             6EA6
         EEDATA           310000-3103FF              400
-        MEDIUMCONST      001000-00780B             680C
+        MEDIUMCONST      001000-0077A5             67A6
         RAM              000060-000FFF              100
         SFR              003700-003FFF              100
-        SMALLCONST       001000-00780B              100
+        SMALLCONST       001000-0077A5              100
         STACK            000060-000FFF              FA0
 
                                   Symbol Table
@@ -225,8 +225,8 @@ _ADACQH                                  (abs)        003EF4
 _ADACQL                                  (abs)        003EF3
 _ADACT                                   (abs)        003EFE
 _ADCAP                                   (abs)        003EF5
-_ADCC_GetSingleConversion                text11       0078D0
-_ADCC_Initialize                         text8        00795C
+_ADCC_GetSingleConversion                text11       00786A
+_ADCC_Initialize                         text8        0078F6
 _ADCLK                                   (abs)        003EFF
 _ADCNT                                   (abs)        003EEB
 _ADCON0                                  (abs)        003EF8
@@ -271,16 +271,16 @@ _CAN_transmit                            text9        007CA6
 _CIOCON                                  (abs)        003700
 _COMSTATbits                             (abs)        003F90
 _ECANCON                                 (abs)        003F91
-_ECAN_Initialize                         text6        007A30
-_ECAN_SetWakeUpInterruptHandler          text7        007812
-_ECAN_WAKI_ISR                           text13       007868
+_ECAN_Initialize                         text6        007952
+_ECAN_SetWakeUpInterruptHandler          text7        0077AC
+_ECAN_WAKI_ISR                           text13       007802
 _INLVLA                                  (abs)        003A44
 _INLVLB                                  (abs)        003A54
 _INLVLC                                  (abs)        003A64
 _INLVLE                                  (abs)        003A84
 _INTCON0bits                             (abs)        003FD2
-_INTERRUPT_Initialize                    text5        00780E
-_INTERRUPT_InterruptManager              text12       007888
+_INTERRUPT_Initialize                    text5        0077A8
+_INTERRUPT_InterruptManager              text12       007822
 _LATA                                    (abs)        003FBA
 _LATB                                    (abs)        003FBB
 _LATC                                    (abs)        003FBC
@@ -291,10 +291,10 @@ _OSCCON1                                 (abs)        0039D9
 _OSCCON3                                 (abs)        0039DB
 _OSCEN                                   (abs)        0039DD
 _OSCFRQ                                  (abs)        0039DF
-_OSCILLATOR_Initialize                   text4        00781C
+_OSCILLATOR_Initialize                   text4        0077B6
 _OSCTUNE                                 (abs)        0039DE
 _PIE5bits                                (abs)        003995
-_PIN_MANAGER_Initialize                  text3        007902
+_PIN_MANAGER_Initialize                  text3        00789C
 _PIR5bits                                (abs)        0039A5
 _PMD0                                    (abs)        0039C0
 _PMD1                                    (abs)        0039C1
@@ -304,7 +304,9 @@ _PMD4                                    (abs)        0039C4
 _PMD5                                    (abs)        0039C5
 _PMD6                                    (abs)        0039C6
 _PMD7                                    (abs)        0039C7
-_PMD_Initialize                          text2        0078AC
+_PMD_Initialize                          text2        007846
+_PORTAbits                               (abs)        003FCA
+_PORTBbits                               (abs)        003FCB
 _RB4PPS                                  (abs)        003A0C
 _RXB0CONbits                             (abs)        003F80
 _RXB0D0                                  (abs)        003F86
@@ -369,7 +371,7 @@ _RXM1SIDL                                (abs)        0037BD
 _SLRCONA                                 (abs)        003A43
 _SLRCONB                                 (abs)        003A53
 _SLRCONC                                 (abs)        003A63
-_SYSTEM_Initialize                       text1        007834
+_SYSTEM_Initialize                       text1        0077CE
 _TRISA                                   (abs)        003FC2
 _TRISB                                   (abs)        003FC3
 _TRISC                                   (abs)        003FC4
@@ -419,8 +421,8 @@ _WPUA                                    (abs)        003A41
 _WPUB                                    (abs)        003A51
 _WPUC                                    (abs)        003A61
 _WPUE                                    (abs)        003A81
-_WakeUpDefaultInterruptHandler           text14       00780C
-_WakeUpInterruptHandler                  bssCOMRAM    00002F
+_WakeUpDefaultInterruptHandler           text14       0077A6
+_WakeUpInterruptHandler                  bssCOMRAM    000030
 __HRAM                                   (abs)        000000
 __Habs1                                  abs1         000000
 __Hbank0                                 bank0        000000
@@ -478,7 +480,7 @@ __Hrparam                                rparam       000000
 __Hsfr                                   sfr          000000
 __Hsmallconst                            smallconst   000000
 __Hspace_0                               (abs)        008000
-__Hspace_1                               (abs)        000031
+__Hspace_1                               (abs)        000032
 __Hspace_2                               (abs)        000000
 __Hspace_4                               (abs)        60000A
 __Hstack                                 stack        000000
@@ -582,7 +584,7 @@ __Ltext7                                 text7        000000
 __Ltext8                                 text8        000000
 __Ltext9                                 text9        000000
 __S0                                     (abs)        008000
-__S1                                     (abs)        000031
+__S1                                     (abs)        000032
 __S2                                     (abs)        000000
 __S4                                     (abs)        000000
 __S5                                     (abs)        000000
@@ -593,43 +595,43 @@ ___rparam_used                           (abs)        000001
 ___sp                                    stack        000000
 __accesstop                              (abs)        000060
 __activetblptr                           (abs)        000002
-__end_of_ADCC_GetSingleConversion        text11       007902
-__end_of_ADCC_Initialize                 text8        0079B8
+__end_of_ADCC_GetSingleConversion        text11       00789C
+__end_of_ADCC_Initialize                 text8        007952
 __end_of_CAN_transmit                    text9        007FFC
-__end_of_ECAN_Initialize                 text6        007B0E
-__end_of_ECAN_SetWakeUpInterruptHandler  text7        00781C
-__end_of_ECAN_WAKI_ISR                   text13       007888
-__end_of_INTERRUPT_Initialize            text5        007812
-__end_of_INTERRUPT_InterruptManager      text12       0078AC
-__end_of_OSCILLATOR_Initialize           text4        007834
-__end_of_PIN_MANAGER_Initialize          text3        00795C
-__end_of_PMD_Initialize                  text2        0078D0
-__end_of_SYSTEM_Initialize               text1        00784E
-__end_of_WakeUpDefaultInterruptHandler   text14       00780E
-__end_of__initialization                 cinit        00785E
+__end_of_ECAN_Initialize                 text6        007A30
+__end_of_ECAN_SetWakeUpInterruptHandler  text7        0077B6
+__end_of_ECAN_WAKI_ISR                   text13       007822
+__end_of_INTERRUPT_Initialize            text5        0077AC
+__end_of_INTERRUPT_InterruptManager      text12       007846
+__end_of_OSCILLATOR_Initialize           text4        0077CE
+__end_of_PIN_MANAGER_Initialize          text3        0078F6
+__end_of_PMD_Initialize                  text2        00786A
+__end_of_SYSTEM_Initialize               text1        0077E8
+__end_of_WakeUpDefaultInterruptHandler   text14       0077A8
+__end_of__initialization                 cinit        0077F8
 __end_of_convertCANid2Reg                text10       007CA6
-__end_of_main                            text0        007A30
-__initialization                         cinit        00784E
+__end_of_main                            text0        007B0E
+__initialization                         cinit        0077E8
 __mediumconst                            mediumconst  000000
-__pbssCOMRAM                             bssCOMRAM    00002F
-__pcinit                                 cinit        00784E
+__pbssCOMRAM                             bssCOMRAM    000030
+__pcinit                                 cinit        0077E8
 __pcstackCOMRAM                          cstackCOMRAM 000001
 __pivt0x8                                ivt0x8       000008
-__ptext0                                 text0        0079B8
-__ptext1                                 text1        007834
+__ptext0                                 text0        007A30
+__ptext1                                 text1        0077CE
 __ptext10                                text10       007B0E
-__ptext11                                text11       0078D0
-__ptext12                                text12       007888
-__ptext13                                text13       007868
-__ptext14                                text14       00780C
+__ptext11                                text11       00786A
+__ptext12                                text12       007822
+__ptext13                                text13       007802
+__ptext14                                text14       0077A6
 __ptext15                                text15       000000
-__ptext2                                 text2        0078AC
-__ptext3                                 text3        007902
-__ptext4                                 text4        00781C
-__ptext5                                 text5        00780E
-__ptext6                                 text6        007A30
-__ptext7                                 text7        007812
-__ptext8                                 text8        00795C
+__ptext2                                 text2        007846
+__ptext3                                 text3        00789C
+__ptext4                                 text4        0077B6
+__ptext5                                 text5        0077A8
+__ptext6                                 text6        007952
+__ptext7                                 text7        0077AC
+__ptext8                                 text8        0078F6
 __ptext9                                 text9        007CA6
 __ramtop                                 ramtop       001000
 __size_of_ADCC_GetSingleConversion       (abs)        000000
@@ -649,7 +651,7 @@ __size_of_convertCANid2Reg               (abs)        000000
 __size_of_main                           (abs)        000000
 __smallconst                             smallconst   000000
 _convertCANid2Reg                        text10       007B0E
-_main                                    text0        0079B8
+_main                                    text0        007A30
 convertCANid2Reg@canIdType               cstackCOMRAM 000005
 convertCANid2Reg@passedInEIDH            cstackCOMRAM 000006
 convertCANid2Reg@passedInEIDL            cstackCOMRAM 000008
@@ -657,7 +659,7 @@ convertCANid2Reg@passedInSIDH            cstackCOMRAM 00000A
 convertCANid2Reg@passedInSIDL            cstackCOMRAM 00000C
 convertCANid2Reg@tempPassedInID          cstackCOMRAM 000001
 convertCANid2Reg@wipSIDL                 cstackCOMRAM 000012
-end_of_initialization                    cinit        00785E
+end_of_initialization                    cinit        0077F8
 intlevel0                                text         000000
 intlevel1                                text         000000
 intlevel2                                text         000000
@@ -665,60 +667,61 @@ intlevel3                                text         000000
 isa$std                                  (abs)        000001
 isa$xinst                                (abs)        000000
 ivt0x8_base                              ivt0x8       000008
-main@CanCurrentData                      cstackCOMRAM 000021
+main@can_current_data                    cstackCOMRAM 000022
 main@current                             cstackCOMRAM 00001F
 main@current_analog_1                    cstackCOMRAM 00001B
 main@current_analog_2                    cstackCOMRAM 00001D
+main@shutdown_flags                      cstackCOMRAM 000021
 stackhi                                  (abs)        000FFF
 stacklo                                  (abs)        000060
 start                                    init         007FFC
-start_initialization                     cinit        00784E
+start_initialization                     cinit        0077E8
 
 
 MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 mcc_generated_files/interrupt_manager.c
-		_INTERRUPT_Initialize		CODE           	780E	0000	4
-		_INTERRUPT_InterruptManager		CODE           	7888	0000	36
+		_INTERRUPT_Initialize		CODE           	77A8	0000	4
+		_INTERRUPT_InterruptManager		CODE           	7822	0000	36
 
 mcc_generated_files/interrupt_manager.c estimated size: 40
 
 mcc_generated_files/pin_manager.c
-		_PIN_MANAGER_Initialize		CODE           	7902	0000	90
+		_PIN_MANAGER_Initialize		CODE           	789C	0000	90
 
 mcc_generated_files/pin_manager.c estimated size: 90
 
 mcc_generated_files/ecan.c
-		_ECAN_SetWakeUpInterruptHandler		CODE           	7812	0000	10
-		_ECAN_Initialize		CODE           	7A30	0000	222
+		_ECAN_SetWakeUpInterruptHandler		CODE           	77AC	0000	10
+		_ECAN_Initialize		CODE           	7952	0000	222
 		_CAN_transmit  		CODE           	7CA6	0000	854
-		_WakeUpDefaultInterruptHandler		CODE           	780C	0000	2
+		_WakeUpDefaultInterruptHandler		CODE           	77A6	0000	2
 		_convertCANid2Reg		CODE           	7B0E	0000	408
-		_ECAN_WAKI_ISR 		CODE           	7868	0000	32
+		_ECAN_WAKI_ISR 		CODE           	7802	0000	32
 
 mcc_generated_files/ecan.c estimated size: 1528
 
 shared
-		__initialization		CODE           	784E	0000	16
+		__initialization		CODE           	77E8	0000	16
 
 shared estimated size: 16
 
 mcc_generated_files/mcc.c
-		_PMD_Initialize		CODE           	78AC	0000	36
-		_OSCILLATOR_Initialize		CODE           	781C	0000	24
-		_SYSTEM_Initialize		CODE           	7834	0000	26
+		_PMD_Initialize		CODE           	7846	0000	36
+		_OSCILLATOR_Initialize		CODE           	77B6	0000	24
+		_SYSTEM_Initialize		CODE           	77CE	0000	26
 
 mcc_generated_files/mcc.c estimated size: 86
 
 mcc_generated_files/adcc.c
-		_ADCC_GetSingleConversion		CODE           	78D0	0000	50
-		_ADCC_Initialize		CODE           	795C	0000	92
+		_ADCC_GetSingleConversion		CODE           	786A	0000	50
+		_ADCC_Initialize		CODE           	78F6	0000	92
 
 mcc_generated_files/adcc.c estimated size: 142
 
 main.c
-		_main          		CODE           	79B8	0000	120
+		_main          		CODE           	7A30	0000	222
 
-main.c estimated size: 120
+main.c estimated size: 222
 

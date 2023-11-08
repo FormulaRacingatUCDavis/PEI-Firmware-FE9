@@ -12,7 +12,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [u S3207 `S3208 1 `uc -> 14 `i ]
 [n S3207 . frame array ]
 "27 main.c
-[; ;main.c: 27:     CanCurrentData.frame.id = PEI_CURRENT;
+[; ;main.c: 27:     can_current_data.frame.id = PEI_CURRENT;
 [c E22691 192 208 1894 896 903 904 905 .. ]
 [n E22691 . VEHICLE_STATE SWITCHES TORQUE_REQUEST_COMMAND BMS_STATUS PEI_CURRENT BMS_VOLTAGES BMS_TEMPERATURES  ]
 "34
@@ -22,6 +22,32 @@ Version 4.0 HI-TECH Software Intermediate Code
 "254 ./mcc_generated_files/adcc.h
 [; ;./mcc_generated_files/adcc.h: 254: adc_result_t ADCC_GetSingleConversion(adcc_channel_t channel);
 [v _ADCC_GetSingleConversion `(us ~T0 @X0 0 ef1`E22613 ]
+"4744 C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h
+[s S3086 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3086 . RA0 RA1 RA2 RA3 RA4 RA5 RA6 RA7 ]
+"4754
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4754: extern volatile unsigned char RXFBCON6 __attribute__((address(0x3737)));
+[s S3087 :1 `uc 1 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3087 . ULPWUIN . LVDIN . RJPU ]
+"4743
+[u S3085 `S3086 1 `S3087 1 ]
+[n S3085 . . . ]
+"4762
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4762:         unsigned F13BP :4;
+[v _PORTAbits `VS3085 ~T0 @X0 0 e@16330 ]
+"4828
+[s S3089 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S3089 . RB0 RB1 RB2 RB3 RB4 RB5 RB6 RB7 ]
+"4838
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4838:         unsigned F15BP :4;
+[s S3090 :3 `uc 1 :1 `uc 1 ]
+[n S3090 . . CCP2_PA2 ]
+"4827
+[u S3088 `S3089 1 `S3090 1 ]
+[n S3088 . . . ]
+"4843
+[; ;C:/Program Files/Microchip/MPLABX/v5.50/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f26k83.h: 4843:         unsigned F14BP_2 :1;
+[v _PORTBbits `VS3088 ~T0 @X0 0 e@16331 ]
 "158 ./mcc_generated_files/ecan.h
 [; ;./mcc_generated_files/ecan.h: 158: uint8_t CAN_transmit(uCAN_MSG *tempCanMsg);
 [v _CAN_transmit `(uc ~T0 @X0 0 ef1`*S3207 ]
@@ -3066,17 +3092,17 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 23:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
 "25
-[; ;main.c: 25:     uCAN_MSG CanCurrentData;
-[v _CanCurrentData `S3207 ~T0 @X0 1 a ]
+[; ;main.c: 25:     uCAN_MSG can_current_data;
+[v _can_current_data `S3207 ~T0 @X0 1 a ]
 "26
-[; ;main.c: 26:     CanCurrentData.frame.idType = 1;
-[e = . . _CanCurrentData 0 0 -> -> 1 `i `uc ]
+[; ;main.c: 26:     can_current_data.frame.idType = 1;
+[e = . . _can_current_data 0 0 -> -> 1 `i `uc ]
 "27
-[; ;main.c: 27:     CanCurrentData.frame.id = PEI_CURRENT;
-[e = . . _CanCurrentData 0 1 -> -> . `E22691 4 `l `ul ]
+[; ;main.c: 27:     can_current_data.frame.id = PEI_CURRENT;
+[e = . . _can_current_data 0 1 -> -> . `E22691 4 `l `ul ]
 "28
-[; ;main.c: 28:     CanCurrentData.frame.dlc = 0x02;
-[e = . . _CanCurrentData 0 2 -> -> 2 `i `uc ]
+[; ;main.c: 28:     can_current_data.frame.dlc = 0x03;
+[e = . . _can_current_data 0 2 -> -> 3 `i `uc ]
 "30
 [; ;main.c: 30:     while (1)
 [e :U 3211 ]
@@ -3096,24 +3122,73 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _current `us ~T0 @X0 1 a ]
 [e = _current -> - -> _current_analog_2 `ui -> _current_analog_1 `ui `us ]
 "41
-[; ;main.c: 41:         CanCurrentData.frame.data0 = current >> 8;
-[e = . . _CanCurrentData 0 3 -> >> -> _current `ui -> 8 `i `uc ]
-"42
-[; ;main.c: 42:         CanCurrentData.frame.data1 = current & 0xFF;
-[e = . . _CanCurrentData 0 4 -> & -> _current `ui -> -> 255 `i `ui `uc ]
+[; ;main.c: 41:         uint8_t shutdown_flags = 0;
+[v _shutdown_flags `uc ~T0 @X0 1 a ]
+[e = _shutdown_flags -> -> 0 `i `uc ]
 "43
-[; ;main.c: 43:         CAN_transmit(&CanCurrentData);
-[e ( _CAN_transmit (1 &U _CanCurrentData ]
+[; ;main.c: 43:         if (PORTAbits.RA0) { shutdown_flags |= (1 << 5); }
+[e $ ! != -> . . _PORTAbits 0 0 `i -> 0 `i 3213  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 5 `i `uc ]
+}
+[e :U 3213 ]
+"44
+[; ;main.c: 44:         if (PORTAbits.RA1) { shutdown_flags |= (1 << 4); }
+[e $ ! != -> . . _PORTAbits 0 1 `i -> 0 `i 3214  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 4 `i `uc ]
+}
+[e :U 3214 ]
+"45
+[; ;main.c: 45:         if (PORTAbits.RA5) { shutdown_flags |= (1 << 3); }
+[e $ ! != -> . . _PORTAbits 0 5 `i -> 0 `i 3215  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 3 `i `uc ]
+}
+[e :U 3215 ]
 "46
-[; ;main.c: 46:         _delay((unsigned long)((500)*(64000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+[; ;main.c: 46:         if (PORTBbits.RB1) { shutdown_flags |= (1 << 2); }
+[e $ ! != -> . . _PORTBbits 0 1 `i -> 0 `i 3216  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 2 `i `uc ]
+}
+[e :U 3216 ]
 "47
-[; ;main.c: 47:     }
+[; ;main.c: 47:         if (PORTBbits.RB0) { shutdown_flags |= (1 << 1); }
+[e $ ! != -> . . _PORTBbits 0 0 `i -> 0 `i 3217  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 1 `i `uc ]
+}
+[e :U 3217 ]
+"48
+[; ;main.c: 48:         if (PORTBbits.RB2) { shutdown_flags |= (1 << 0); }
+[e $ ! != -> . . _PORTBbits 0 2 `i -> 0 `i 3218  ]
+{
+[e =| _shutdown_flags -> << -> 1 `i -> 0 `i `uc ]
+}
+[e :U 3218 ]
+"52
+[; ;main.c: 52:         can_current_data.frame.data0 = current >> 8;
+[e = . . _can_current_data 0 3 -> >> -> _current `ui -> 8 `i `uc ]
+"53
+[; ;main.c: 53:         can_current_data.frame.data1 = current & 0xFF;
+[e = . . _can_current_data 0 4 -> & -> _current `ui -> -> 255 `i `ui `uc ]
+"54
+[; ;main.c: 54:         can_current_data.frame.data2 = shutdown_flags;
+[e = . . _can_current_data 0 5 _shutdown_flags ]
+"55
+[; ;main.c: 55:         CAN_transmit(&can_current_data);
+[e ( _CAN_transmit (1 &U _can_current_data ]
+"58
+[; ;main.c: 58:         _delay((unsigned long)((150)*(64000000/4000.0)));
+[e ( __delay (1 -> * -> -> 150 `i `d / -> -> 64000000 `l `d .4000.0 `ul ]
+"59
+[; ;main.c: 59:     }
 }
 [e :U 3210 ]
 [e $U 3211  ]
 [e :U 3212 ]
-"48
-[; ;main.c: 48: }
+"60
+[; ;main.c: 60: }
 [e :UE 3209 ]
 }

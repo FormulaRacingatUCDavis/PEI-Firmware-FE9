@@ -40,23 +40,12 @@ void main(void)
         // shutdown flags
         uint8_t shutdown_flags = 0;
         
-        if (IMD_OK_5V_GetValue()) { shutdown_flags |= (1 << 5); }
-        else { shutdown_flags &= (0b011111); }
-        
-        if (BMS_OK_GetValue()) { shutdown_flags |= (1 << 4); }
-        else { shutdown_flags &= (0b101111); }
-        
-        if (SD_HVMS_FINAL_5V_GetValue()) { shutdown_flags |= (1 << 3); }
-        else { shutdown_flags &= (0b110111); }
-        
-        if (AIR1_5V_GetValue()) { shutdown_flags |= (1 << 2); }
-        else { shutdown_flags &= (0b111011); }
-        
+        if (IMD_OK_5V_GetValue()) { shutdown_flags |= (1 << 5); }       
+        if (BMS_OK_GetValue()) { shutdown_flags |= (1 << 4); }       
+        if (SD_HVMS_FINAL_5V_GetValue()) { shutdown_flags |= (1 << 3); }       
+        if (AIR1_5V_GetValue()) { shutdown_flags |= (1 << 2); }      
         if (AIR2_5V_GetValue()) { shutdown_flags |= (1 << 1); }
-        else { shutdown_flags &= (0b111101); }
-        
         if (PRECHARGE_5V_GetValue()) { shutdown_flags |= (1 << 0); }
-        else { shutdown_flags &= (0b111110); }
 
         // send data via PCAN to BMS main
         // note: uses 2's complement
@@ -66,7 +55,7 @@ void main(void)
         CAN_transmit(&can_current_data);
         
         
-        __delay_ms(500);
+        __delay_ms(150);
     }
 }
 /**

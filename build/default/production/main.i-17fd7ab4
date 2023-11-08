@@ -36668,6 +36668,6 @@ void main(void)
         CAN_transmit(&can_current_data);
 
 
-        _delay((unsigned long)((150)*(64000000/4000.0)));
+        _delay((unsigned long)((75)*(64000000/4000.0)));
     }
 }
